@@ -42,7 +42,9 @@
                 @auth
                     <a href="/logout">Log out</a>
                     @if (auth()->user()->isAdmin())
-                        <a href="/dashboard">Dashboard</a>
+                    <script type="text/javascript">
+                        window.location = "/dashboard";//here double curly bracket
+                    </script>
                     @endif
                 @endauth
             </div>
@@ -81,7 +83,10 @@
                                 @auth
                                     <a href="/logout">Log out</a>
                                     @if (auth()->user()->isAdmin())
-                                        <a href="/dashboard">Dashboard</a>
+                                        <!-- <a href="/dashboard">Dashboard</a> -->
+                                        <script type="text/javascript">
+                                            window.location = "/dashboard";//here double curly bracket
+                                            </script>
                                     @endif
                                 @endauth
                             </div>
@@ -132,9 +137,9 @@
                             <li @if (url()->current() == url('contact/create')) class="active" @endif>
                                 <a href="{{ route('contact.create') }}">Contacts</a>
                             </li>
-                            <li @if (url()->current() == url('checkout/create')) class="active" @endif>
+                            <!-- <li @if (url()->current() == url('checkout/create')) class="active" @endif>
                                 <a href="{{ route('checkout.create') }}">Checkout</a>
-                            </li>
+                            </li> -->
                             <li class="mobile-only">
                                 <a href="{{ url('edit-profile') }}">Update Profile</a>
                             </li>

@@ -43,15 +43,15 @@
                                    <img src="{{ $category->image_path }}" width="100" height="100" class="of-cover">
                                 </td>
                                 <td>
-                                    <a href="{{ route('categories.edit', ['category' => $category->id ]) }}" 
-                                        data-toggle="tooltip" data-original-title="Edit"> 
-                                        <i class="fa fa-pencil text-inverse m-r-10"></i> 
+                                    <a href="{{ route('categories.edit', ['category' => $category->id ]) }}"
+                                        data-toggle="tooltip" data-original-title="Edit">
+                                        <i class="fa fa-pencil text-inverse m-r-10"></i>
                                     </a>
                                     <form action="{{ route('categories.destroy', ['category' => $category->id ]) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete"> 
-                                            <i class="fa fa-close text-danger"></i> 
+                                        <button class="btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete">
+                                            <i class="fa fa-close text-danger"></i>
                                         </button>
                                     </form>
                                 </td>

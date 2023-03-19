@@ -19,9 +19,9 @@
             <div class="card-body">
                 <h4 class="card-title">Products Table</h4>
                 <div class="table-responsive">
-                    <a href="{{ url('excel/products') }}">
+                    <!-- <a href="{{ url('excel/products') }}">
                         <button type="button" class="btn btn-primary mb-3">EXCEL</button>
-                    </a>
+                    </a> -->
                     <div class="form-group">
                         <input type="text" class="form-control" id="search" placeholder="Type to search" autofocus>
                     </div>
@@ -30,6 +30,7 @@
                             <tr>
                                 <th>No</th>
                                 <th>Name</th>
+                                <th>Image product</th>
                                 <th>Price</th>
                                 <th>Quantity</th>
                                 <th>Category</th>
@@ -42,24 +43,29 @@
                             <tr>
                                 <td>{{ $loop->index + 1 }}</td>
                                 <td>{{ $product->name }}</td>
+                                <td>
+                                    @if (count($product->images) > 0)
+                                        <img src="{{ $product->images[0]->path }}" width="100" height="100" class="of-cover">
+                                    @endif
+                                </td>
                                 <td>{{ money($product->price) }}</td>
                                 <td>{{ $product->quantity }}</td>
                                 <td>{{ $product->category->name }}</td>
                                 <td>{{ $product->subcategory->name }}</td>
                                 <td>
-                                    <a href="{{ route('products.show', ['product' => $product->id ]) }}" 
-                                        data-toggle="tooltip" data-original-title="View"> 
+                                    <a href="{{ route('products.show', ['product' => $product->id ]) }}"
+                                        data-toggle="tooltip" data-original-title="View">
                                         <i class="fa fa-eye m-r-15" aria-hidden="true"></i>
                                     </a>
-                                    <a href="{{ route('products.edit', ['product' => $product->id ]) }}" 
-                                        data-toggle="tooltip" data-original-title="Edit"> 
-                                        <i class="fa fa-pencil text-inverse m-r-10"></i> 
+                                    <a href="{{ route('products.edit', ['product' => $product->id ]) }}"
+                                        data-toggle="tooltip" data-original-title="Edit">
+                                        <i class="fa fa-pencil text-inverse m-r-10"></i>
                                     </a>
                                     <form action="{{ route('products.destroy', ['product' => $product->id ]) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete"> 
-                                            <i class="fa fa-close text-danger"></i> 
+                                        <button class="btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete">
+                                            <i class="fa fa-close text-danger"></i>
                                         </button>
                                     </form>
                                 </td>
