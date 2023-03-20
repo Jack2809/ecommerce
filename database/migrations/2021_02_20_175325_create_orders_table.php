@@ -27,7 +27,7 @@ class CreateOrdersTable extends Migration
             $table->string('notes')->nullable();
             $table->double('price');
             $table->bigInteger('discount')->default(0)->nullable();
-            $table->string('status')->nullable()->comment('pending, shipping, delivered')->default('Pending');
+            $table->string('status')->nullable()->comment('Đang xử lý, Đang giao hàng, Đã giao hàng')->default('Đang xử lý');
             $table->timestamps();
         });
     }

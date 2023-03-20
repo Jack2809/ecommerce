@@ -307,7 +307,7 @@ $("#shop_loadmore").on("click", function(e) {
                         " results"
                 );
             }
-            $("#shop_loadmore").text("Load More");
+            $("#shop_loadmore").text("Xem thêm");
         }
     });
 });

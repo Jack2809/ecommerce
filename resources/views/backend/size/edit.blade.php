@@ -16,20 +16,20 @@
 <div class="row">
     <div class="col-12">
         <div class="card card-body">
-            <h3 class="box-title m-b-0 mb-3">Edit Size</h3>
+            <h3 class="box-title m-b-0 mb-3">Cập nhật kích cỡ</h3>
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <form action="{{ route('sizes.update', ['size' => $size->id]) }}" method="post">
                         @method('patch')
                         @csrf
                         <div class="form-group">
-                            <label>Size Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Name" name="name" value="{{ $size->name }}" autocomplete="off">
-                            @error('name') 
+                            <label>Tên kích cỡ</label>
+                            <input type="text" class="form-control" placeholder="Nhập têm kích cỡ..." name="name" value="{{ $size->name }}" autocomplete="off">
+                            @error('name')
                                 <div class="error">{{ $message }}</div>
                             @enderror
                         </div>
-                        <button type="submit" class="btn btn-danger"> <i class="fa fa-pencil"></i> Save</button>
+                        <button type="submit" class="btn btn-danger"> <i class="fa fa-pencil"></i>Cập nhật</button>
                     </form>
                 </div>
             </div>

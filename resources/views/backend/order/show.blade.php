@@ -6,58 +6,58 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-sm-12">
-                            <h3 class="box-title m-t-40">General Info</h3>
+                            <h3 class="box-title m-t-40">Chi tiết đơn hàng</h3>
                             <div class="table-responsive">
                                 <table class="table">
                                     <tbody>
                                         <tr>
-                                            <td width="390">Customer Name</td>
+                                            <td width="390">Tên khách hàng</td>
                                             <td>{{ $order->customer_name }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Customer Phone</td>
+                                            <td>Số điện thoại</td>
                                             <td>{{ $order->customer_phone }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Customer Email</td>
+                                            <td>Email</td>
                                             <td>{{ $order->customer_email }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Address</td>
+                                            <td>Địa chỉ</td>
                                             <td>{{ $order->customer_address }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Province</td>
+                                            <td>Tỉnh/Thành phố</td>
                                             <td>{{ $order->province->name }}</td>
                                         </tr>
                                         <tr>
-                                            <td>District</td>
+                                            <td>Quận/Huyện</td>
                                             <td>{{ $order->district->name }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Ward</td>
+                                            <td>Phường/Xã/Thị trấn</td>
                                             <td>{{ $order->ward->name }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Notes</td>
+                                            <td>Ghi chú</td>
                                             <td>{{ $order->notes }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Price (after discount)</td>
+                                            <td>Giá trị đã khuyến mãi (after discount)</td>
                                             <td>{{ money($order->price) }}</td>
                                         </tr>
                                         <tr>
-                                            <td>Discount</td>
+                                            <td>Khuyến mãi</td>
                                             <td>{{ $order->discount }}%</td>
                                         </tr>
                                         <tr>
-                                            <td>Status</td>
+                                            <td>Trạng thái</td>
                                             <td>
                                                 <input type="hidden" id="order_id" value="{{ $order->id }}">
                                                 <select class="form-control" id="order_status">
-                                                    <option {{ $order->status == 'Pending' ? 'selected' : '' }}>Pending</option>
-                                                    <option {{ $order->status == 'Shipping' ? 'selected' : '' }}>Shipping</option>
-                                                    <option {{ $order->status == 'Delivered' ? 'selected' : '' }}>Delivered</option>
+                                                    <option {{ $order->status == 'Đang xử lý' ? 'selected' : '' }}>Đang xử lý</option>
+                                                    <option {{ $order->status == 'Đang giao hàng' ? 'selected' : '' }}>Đang giao hàng</option>
+                                                    <option {{ $order->status == 'Đã giao hàng' ? 'selected' : '' }}>Đã giao hàng</option>
                                                 </select>
                                             </td>
                                         </tr>
@@ -80,10 +80,10 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Size</th>
-                                    <th>Color</th>
-                                    <th>Quantity</th>
+                                    <th>Tên sản phẩm</th>
+                                    <th>Kích cỡ</th>
+                                    <th>Màu sắc</th>
+                                    <th>Số lượng</th>
                                 </tr>
                             </thead>
                             <tbody>

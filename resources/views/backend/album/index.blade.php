@@ -16,13 +16,13 @@
 @section('content')
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
-            <h4 class="text-themecolor">Albums</h4>
+            <h4 class="text-themecolor">Bộ sưu tập ảnh</h4>
         </div>
         <div class="col-md-7 align-self-center text-right">
             <div class="d-flex justify-content-end align-items-center">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Albums</li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Bộ sưu tập ảnh</li>
                 </ol>
             </div>
         </div>
@@ -30,14 +30,14 @@
     <div class="row">
         <div class="col-12">
             <div class="card card-body">
-                <h3 class="box-title m-b-0 mb-3">New Albums</h3>
+                <h3 class="box-title m-b-0 mb-3">Bộ sưu tập ảnh</h3>
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <form action="{{ url('albums-images') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label>Album Title</label>
-                                <input type="text" class="form-control" placeholder="Enter Title" required name="title"
+                                <label>Tên bộ sưu tập</label>
+                                <input type="text" class="form-control" placeholder="Tên bộ sưu tập..." required name="title"
                                     value="{{ old('title') }}" autocomplete="off">
                                 @error('title')
                                     <div class="error">{{ $message }}</div>
@@ -45,8 +45,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Description</label>
-                                <textarea class="form-control" name="description"
+                                <label>Mô tả</label>
+                                <textarea class="form-control" name="Mô tả"
                                     rows="3">{{ old('description') }}</textarea>
                                 @error('description')
                                     <div class="error">{{ $message }}</div>
@@ -54,22 +54,22 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Images (maximum 6 files)</label>
+                                <label>Hình ảnh (Tối đa 6 hình ảnh)</label>
                                 <div class="input-group">
                                     <div class="custom-file">
                                         <input type="file" class="custom-file-input" name="images[]" multiple
                                             accept="image/*">
-                                        <label class="custom-file-label">Choose images</label>
+                                        <label class="custom-file-label">Chọn hình ảnh</label>
                                     </div>
                                 </div>
                                 @error('images')
                                     <div class="error">{{ $message }}</div>
                                 @enderror
                                 @if ($errors->any())
-                                    <div class="error">Please choose images again</div>
+                                    <div class="error">Hãy chọn lại hình ảnh</div>
                                 @endif
                             </div>
-                            <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                            <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Tạo bộ sưu tập</button>
                         </form>
                     </div>
                 </div>
@@ -94,20 +94,20 @@
                                             class="mr-2">
                                             @method('patch')
                                             @csrf
-                                            <button class="btn btn-success">Display <i class="fas fa-check"></i></button>
+                                            <button class="btn btn-success">Hiển thị <i class="fas fa-check"></i></button>
                                         </form>
                                     @else
                                         <form action="albums-images/{{ $item->id }}/display" method="post"
                                             class="mr-2">
                                             @method('patch')
                                             @csrf
-                                            <button class="btn btn-success">Display</button>
+                                            <button class="btn btn-success">Hiển thị</button>
                                         </form>
                                     @endif
                                     <form action="albums-images/{{ $item->id }}/delete" method="post">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn btn-danger">Delete</button>
+                                        <button class="btn btn-danger">Xoá</button>
                                     </form>
                                 </div>
                             </div>

@@ -10,15 +10,14 @@
                 <div class="col-lg-6 col-md-6">
                     <div class="contact__text">
                         <div class="section-title">
-                            <span>Information</span>
-                            <h2>Contact Us</h2>
-                            <p>As you might expect of a company that began as a high-end interiors contractor, we pay
-                                strict attention.</p>
+                            <span>Thông tin</span>
+                            <h2>Liên hệ chúng tôi</h2>
+                            <p>Như bạn có thể mong đợi về một công ty bắt đầu với tư cách là nhà đầu tư cao cấp, chúng tôi rất chú ý.</p>
                         </div>
                         <ul>
                             <li>
-                                <p><i class="fas fa-map-marker-alt mr-2"></i> Vinh Vien Street, Ward 15, District 11, Viet Nam</p>
-                                <a href="tel:0932042076"><i class="fas fa-mobile-alt mr-2"></i> +025215202</a>
+                                <p><i class="fas fa-map-marker-alt mr-2"></i>Trường đại học FPT, Khu công nghệ cao, Quận 9</p>
+                                <a href="tel:0932042076"><i class="fas fa-mobile-alt mr-2"></i> 0925215202</a>
                                 <p><i class="fas fa-envelope mr-2"></i>tungptse140843@fpt.edu.vn</p>
                             </li>
                         </ul>
@@ -30,14 +29,14 @@
                             @csrf
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Name" name="name" value="{{ old('name') }}" autocomplete="off">
+                                    <input type="text" placeholder="Hộ và tên" name="name" value="{{ old('name') }}" autocomplete="off">
                                 </div>
                                 <div class="col-lg-6">
                                     <input type="text" placeholder="Email" name="email" value="{{ old('email') }}" autocomplete="off">
                                 </div>
                                 <div class="col-lg-12 send-message">
-                                    <textarea placeholder="Message" name="message">{{ old('message') }}</textarea>
-                                    <button type="submit" class="site-btn">Send Message</button>
+                                    <textarea placeholder="Nội dung" name="message">{{ old('message') }}</textarea>
+                                    <button type="submit" class="site-btn">Liên hệ</button>
                                 </div>
                             </div>
                         </form>

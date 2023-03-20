@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <h2>Our Blog</h2>
+                <!-- <h2>Blog</h2> -->
             </div>
         </div>
     </div>
@@ -20,7 +20,7 @@
                     <div class="blog__item__text">
                         <span><i class="far fa-calendar"></i> {{ $blog->created_at->format('d F Y') }}</span>
                         <h5>{{ $blog->title }}</h5>
-                        <a href="{{ route('blog-details', ['blog' => $blog->id]) }}">Read More</a>
+                        <a href="{{ route('blog-details', ['blog' => $blog->id]) }}">Xem thêm</a>
                     </div>
                 </div>
             </div>

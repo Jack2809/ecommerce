@@ -16,23 +16,23 @@
 <div class="row">
     <div class="col-12">
         <div class="card card-body">
-            <h3 class="box-title m-b-0 mb-3">Edit Blog</h3>
+            <h3 class="box-title m-b-0 mb-3">Cập nhật Blog</h3>
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <form action="{{ route('blogs.update', ['blog' => $blog->id]) }}" method="post" enctype="multipart/form-data">
                         @method('patch')
                         @csrf
                         <div class="form-group">
-                            <label>Blog Title</label>
-                            <input type="text" class="form-control" placeholder="Enter Name"
+                            <label>Tên Blog</label>
+                            <input type="text" class="form-control" placeholder="Nhập tên Blog..."
                              name="title" value="{{ old('title', $blog->title) }}" autocomplete="off">
-                            @error('title') 
+                            @error('title')
                                 <div class="error">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <h5 class="m-t-30">Select tags</h5>
+                            <h5 class="m-t-30">Chọn thẻ</h5>
                             @foreach ($tags as $tag)
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="tag{{ $tag->id }}" value="{{ $tag->id }}"
@@ -40,28 +40,28 @@
                                     <label class="custom-control-label" for="tag{{ $tag->id }}">{{ $tag->name }}</label>
                                 </div>
                             @endforeach
-                            @error('tags') 
+                            @error('tags')
                                 <div class="error">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <label>Image</label>
+                            <label>Hình ảnh</label>
                             <div class="input-group">
                                 <div class="custom-file">
                                     <input type="file" class="custom-file-input @error('image_path') is-invalid @enderror" name="image_path" accept="image/*">
-                                    <label class="custom-file-label">Choose image</label>
+                                    <label class="custom-file-label">Chọn hình ảnh</label>
                                 </div>
                             </div>
                             @if ($errors->any())
-                                <div class="error">Please choose images again</div>
+                                <div class="error">Chọn lại hình ảnh</div>
                             @endif
                         </div>
                         <textarea id="summernote" name="body">{!! $blog->body !!}</textarea>
-                        @error('body') 
+                        @error('body')
                             <div class="error">{{ $message }}</div>
                         @enderror
-                        <button type="submit" class="btn btn-danger mt-3"> <i class="fa fa-pencil"></i> Save</button>
+                        <button type="submit" class="btn btn-danger mt-3"> <i class="fa fa-pencil"></i>Cập nhật</button>
                     </form>
                 </div>
             </div>

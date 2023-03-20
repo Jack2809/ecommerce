@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Roles</h4>
+        <h4 class="text-themecolor">Loại người dùng</h4>
     </div>
     <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item active">Roles</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Loại người dùng</li>
             </ol>
         </div>
     </div>
@@ -24,8 +24,8 @@
                         <table class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>User Name</th>
-                                    <th>User Email</th>
+                                    <th>Tên người dùng</th>
+                                    <th>Email</th>
                                     <th class="text-nowrap">Assign</th>
                                 </tr>
                             </thead>
@@ -46,7 +46,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <button type="submit" class="btn btn-primary" btn-lg btn-block">Save</button>
+                    <button type="submit" class="btn btn-primary" btn-lg btn-block">Cập nhật</button>
                 </form>
             </div>
         </div>

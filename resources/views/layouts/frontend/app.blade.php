@@ -12,6 +12,12 @@
         rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('bundle/frontend/app.css') }}" type="text/css" />
     @yield('css')
+    <style>
+        .fa.fa-chevron-down {
+            right: 0px;
+            margin-left: 2px;
+        }
+    </style>
 </head>
 
 <body>
@@ -77,11 +83,11 @@
                         <div class="header__top__right">
                             <div class="header__top__links">
                                 @guest
-                                    <a href="{{ url('login') }}">Login</a>
-                                    <a href="{{ route('register') }}">Register</a>
+                                    <a href="{{ url('login') }}">Đăng nhập</a>
+                                    <a href="{{ route('register') }}">Đăng kí</a>
                                 @endguest
                                 @auth
-                                    <a href="/logout">Log out</a>
+                                    <a href="/logout">Đăng xuất</a>
                                     @if (auth()->user()->isAdmin())
                                         <!-- <a href="/dashboard">Dashboard</a> -->
                                         <script type="text/javascript">
@@ -92,13 +98,13 @@
                             </div>
 
                             <div class="header__top__hover my-profile">
-                                <span>My Profile <i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                                <span>Thông tin cá nhân<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
                                 <ul>
                                     <li>
-                                        <a href="{{ url('edit-profile') }}">Update Profile</a>
+                                        <a href="{{ url('edit-profile') }}">Cập nhật thông tin</a>
                                     </li>
                                     <li>
-                                        <a href="{{ url('edit-password') }}">Change Password</a>
+                                        <a href="{{ url('edit-password') }}">Đổi mật khẩu</a>
                                     </li>
                                 </ul>
                             </div>
@@ -126,7 +132,7 @@
                     <nav class="header__menu mobile-menu">
                         <ul>
                             <li @if (url()->current() == url('/')) class="active" @endif>
-                                <a href="/">Home</a>
+                                <a href="/">Trang chủ</a>
                             </li>
                             <li @if (url()->current() == url('shop')) class="active" @endif>
                                 <a href="{{ route('shop') }}">Shop</a>
@@ -135,16 +141,16 @@
                                 <a href="{{ url('all-blogs') }}">Blog</a>
                             </li>
                             <li @if (url()->current() == url('contact/create')) class="active" @endif>
-                                <a href="{{ route('contact.create') }}">Contacts</a>
+                                <a href="{{ route('contact.create') }}">Liên hệ</a>
                             </li>
                             <!-- <li @if (url()->current() == url('checkout/create')) class="active" @endif>
                                 <a href="{{ route('checkout.create') }}">Checkout</a>
                             </li> -->
                             <li class="mobile-only">
-                                <a href="{{ url('edit-profile') }}">Update Profile</a>
+                                <a href="{{ url('edit-profile') }}">Thông tin cá nhân</a>
                             </li>
                             <li class="mobile-only">
-                                <a href="{{ url('edit-password') }}">Change Password</a>
+                                <a href="{{ url('edit-password') }}">Đổi mật khẩu</a>
                             </li>
                         </ul>
                     </nav>
@@ -187,7 +193,7 @@
                                 </div>
                             </a>
                         </div>
-                        <p>The customer is at the heart of our unique business model, which includes design.</p>
+                        <!-- <p>Khách hàng là trung tâm để chúng tôi phục vụ và p</p> -->
                         <a href="#">
                             <img src="{{ asset('images/details-payment.png') }}" alt="">
                         </a>
@@ -195,23 +201,23 @@
                 </div>
                 <div class="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6>Shopping</h6>
+                        <h6>Mua sắm</h6>
                         <ul>
                             @foreach ($sub_categories_footer as $item)
                                 <li><a
                                         href="{{ route('shop', ['subcategory' => $item->id]) }}">{{ $item->name }}</a>
                                 </li>
                             @endforeach
-                            <li><a href="{{ route('shop', ['sale' => 'yes']) }}">Sale off</a></li>
-                            <li><a href="{{ url('order-checking') }}">Search Order</a></li>
+                            <li><a href="{{ route('shop', ['sale' => 'yes']) }}">Khuyến mãi</a></li>
+                            <li><a href="{{ url('order-checking') }}">Tìm kiếm đơn hàng</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3 col-sm-6">
                     <div class="footer__widget">
-                        <h6>Contact</h6>
+                        <h6>Thông tin liên hệ</h6>
                         <ul>
-                            <li><a href="{{ route('contact.create') }}">Contact Us</a></li>
+                            <li><a href="{{ route('contact.create') }}">Liên hệ chúng tôi</a></li>
                             <li><a href="tel:0932042076">0925215202</a></li>
                             <li><a href="mailto:tungptse140843@fpt.edu.vn">tungptse140843@fpt.edu.vnm</a></li>
                         </ul>
@@ -219,11 +225,11 @@
                 </div>
                 <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
                     <div class="footer__widget newslatter">
-                        <h6>NewLetter</h6>
+                        <h6>Gửi Thư</h6>
                         <div class="footer__newslatter">
-                            <p>Be the first to know about new arrivals, look books, sales & promos!</p>
+                            <p>Hãy là người đầu tiên biết gia nhập chúng tôi</p>
                             <form action="#">
-                                <input type="text" placeholder="Your email">
+                                <input type="text" placeholder="Nhập email">
                                 <button type="submit"><i class="fa fa-envelope-square"></i></button>
                             </form>
                         </div>
@@ -246,7 +252,7 @@
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
             <form action="{{ route('shop') }}" class="search-model-form">
-                <input type="text" id="search-input" placeholder="Search here....." name="name" autocomplete="off">
+                <input type="text" id="search-input" placeholder="Tìm kiếm....." name="name" autocomplete="off">
             </form>
         </div>
     </div>

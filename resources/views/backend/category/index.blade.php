@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Categories</h4>
+        <h4 class="text-themecolor">Loại sản phẩm</h4>
     </div>
     <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item active">Categories</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Loại sản phẩm</li>
             </ol>
         </div>
     </div>
@@ -17,21 +17,21 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Categories Table</h4>
+                <h4 class="card-title">Danh sách loại sản phẩm</h4>
                 <div class="table-responsive">
-                    <a href="{{ url('excel/categories') }}">
+                    <!-- <a href="{{ url('excel/categories') }}">
                         <button type="button" class="btn btn-primary mb-3">EXCEL</button>
-                    </a>
+                    </a> -->
                     <div class="form-group">
-                        <input type="text" class="form-control" id="search" placeholder="Type to search" autofocus>
+                        <input type="text" class="form-control" id="search" placeholder="Tìm kiếm loại sản phẩm..." autofocus>
                     </div>
                     <table class="table table-bordered" id="table">
                         <thead>
                             <tr>
-                                <th>No</th>
-                                <th>Category Name</th>
-                                <th>Category Image</th>
-                                <th class="text-nowrap">Action</th>
+                                <th>Stt</th>
+                                <th>Tên loại sản phẩm</th>
+                                <th>Hình ảnh</th>
+                                <th class="text-nowrap"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -44,7 +44,7 @@
                                 </td>
                                 <td>
                                     <a href="{{ route('categories.edit', ['category' => $category->id ]) }}"
-                                        data-toggle="tooltip" data-original-title="Edit">
+                                        data-toggle="tooltip" data-original-title="Cập nhật">
                                         <i class="fa fa-pencil text-inverse m-r-10"></i>
                                     </a>
                                     <form action="{{ route('categories.destroy', ['category' => $category->id ]) }}" method="post" class="d-inline">

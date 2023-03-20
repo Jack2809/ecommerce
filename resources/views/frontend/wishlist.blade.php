@@ -5,11 +5,11 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__text">
-                    <h4>Your Wishlist</h4>
+                    <h4>Danh sách của bạn</h4>
                     <div class="breadcrumb__links">
-                        <a href="/">Home</a>
+                        <a href="/">Trang chủ</a>
                         <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
-                        <span>Wishlist</span>
+                        <span>Danh sách ưa thích</span>
                     </div>
                 </div>
             </div>
@@ -24,8 +24,8 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>Product</th>
-                                <th>Price</th>
+                                <th>Sản phẩm</th>
+                                <th>Giá Trị (VND)</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -71,7 +71,7 @@
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="continue__btn">
-                            <a href="{{ route('shop') }}">Continue Shopping</a>
+                            <a href="{{ route('shop') }}">Tiếp tục mua sắm</a>
                         </div>
                     </div>
                 </div>

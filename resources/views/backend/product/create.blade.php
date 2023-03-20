@@ -2,13 +2,13 @@
 @section('content')
     <div class="row page-titles">
         <div class="col-md-5 align-self-center">
-            <h4 class="text-themecolor">Products</h4>
+            <h4 class="text-themecolor">Sản phẩm</h4>
         </div>
         <div class="col-md-7 align-self-center text-right">
             <div class="d-flex justify-content-end align-items-center">
                 <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                    <li class="breadcrumb-item active">Products</li>
+                    <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Trang chủ</a></li>
+                    <li class="breadcrumb-item active">Sản phẩm</li>
                 </ol>
             </div>
         </div>
@@ -16,14 +16,14 @@
     <div class="row">
         <div class="col-12">
             <div class="card card-body">
-                <h3 class="box-title m-b-0 mb-3">New Product</h3>
+                <h3 class="box-title m-b-0 mb-3">Tạo sản phẩm</h3>
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <form action="{{ route('products.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label>Product Name</label>
-                                <input type="text" class="form-control" placeholder="Enter Name" name="name"
+                                <label>Tên sản phẩm</label>
+                                <input type="text" class="form-control" placeholder="Nhập tên sản phẩm" name="name"
                                     value="{{ old('name') }}" autocomplete="off">
                                 @error('name')
                                     <div class="error">{{ $message }}</div>
@@ -31,7 +31,7 @@
                             </div>
 
                             {{-- <div>
-                                <label class="mb-3">Product Attributes</label>
+                                <label class="mb-3">Thuộc tính sản phẩm</label>
                                 <button type="button" class="btn btn-dark btn-sm" id="addAttribute">
                                     <i class="fas fa-plus"></i>
                                 </button>
@@ -45,7 +45,7 @@
                                 <div class="card">
                                     <div class="card-body p-0">
                                         <div class="d-flex align-items-center mb-3">
-                                            <p class="card-title m-0 mr-3">Products Attributes</p>
+                                            <p class="card-title m-0 mr-3">Thuộc tính sản phẩm</p>
                                             <button type="button" class="btn btn-dark btn-sm" id="addAttribute">
                                                 <i class="fas fa-plus"></i>
                                             </button>
@@ -54,11 +54,11 @@
                                             <table class="table table-bordered" id="table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Sizes</th>
-                                                        <th>Colors</th>
-                                                        <th>Quantity</th>
-                                                        <th>Image</th>
-                                                        <th>Action</th>
+                                                        <th>Kích cỡ</th>
+                                                        <th>Màu sắc</th>
+                                                        <th>Sô lượng</th>
+                                                        <th>Hình ảnh</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="attributeWrapper">
@@ -66,7 +66,7 @@
                                                     <tr>
                                                         <td>
                                                             <select class="custom-select" name="sizes[]">
-                                                                <option selected value="">Sizes</option>
+                                                                <option selected value="">Kích cỡ</option>
                                                                 @foreach ($sizes as $size)
                                                                     <option value="{{ $size->id }}" @if ($size->id == $item) selected @endif>
                                                                         {{ $size->name }}
@@ -112,7 +112,7 @@
                                 <div class="card">
                                     <div class="card-body p-0">
                                         <div class="d-flex align-items-center mb-3">
-                                            <p class="card-title m-0 mr-3">Products Attributes</p>
+                                            <p class="card-title m-0 mr-3">Thuộc tính sản phẩm</p>
                                             <button type="button" class="btn btn-dark btn-sm" id="addAttribute">
                                                 <i class="fas fa-plus"></i>
                                             </button>
@@ -121,18 +121,18 @@
                                             <table class="table table-bordered" id="table">
                                                 <thead>
                                                     <tr>
-                                                        <th>Size</th>
-                                                        <th>Color</th>
-                                                        <th>Quantity</th>
-                                                        <th>Image</th>
-                                                        <th>Action</th>
+                                                        <th>Kích cỡ</th>
+                                                        <th>Màu sắc</th>
+                                                        <th>Số lượng</th>
+                                                        <th>Hình ảnh</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
                                                 <tbody id="attributeWrapper">
                                                     <tr>
                                                         <td>
                                                             <select class="custom-select" name="sizes[]">
-                                                                <option selected value="">Sizes</option>
+                                                                <option selected value="">Kích cỡ</option>
                                                                 @foreach ($sizes as $size)
                                                                     <option value="{{ $size->id }}">
                                                                         {{ $size->name }}
@@ -142,7 +142,7 @@
                                                         </td>
                                                         <td>
                                                             <select class="custom-select" name="colors[]">
-                                                                <option selected value="">Colors</option>
+                                                                <option selected value="">Màu sắc</option>
                                                                 @foreach ($colors as $color)
                                                                     <option value="{{ $color->id }}">
                                                                         {{ $color->name }}
@@ -152,18 +152,18 @@
                                                         </td>
                                                         <td>
                                                             <input type="number" class="form-control"
-                                                                placeholder="Enter Quantity" name="quantity[]" value="">
+                                                                placeholder="Nhập số lượng..." name="quantity[]" value="">
                                                         </td>
                                                         <td>
                                                             <div class="custom-file">
                                                                 <input type="file" multiple class="custom-file-input"
                                                                     name="images0[]" accept="image/*">
-                                                                <label class="custom-file-label">Choose images</label>
+                                                                <label class="custom-file-label">Chọn hình ảnh</label>
                                                             </div>
                                                         </td>
                                                         <td>
                                                             <button class="btn-none deleteAttribute" data-toggle="tooltip"
-                                                                data-original-title="Delete">
+                                                                data-original-title="Xoá">
                                                                 <i class="fa fa-close text-danger"></i>
                                                             </button>
                                                         </td>
@@ -190,9 +190,9 @@
 
 
                             <div class="form-group">
-                                <h5 class="m-t-30">Select Sub Category</h5>
+                                <h5 class="m-t-30">Chọn danh mục sản phẩm</h5>
                                 <select class="custom-select" name="sub_category_id">
-                                    <option selected value="">Select sub-category</option>
+                                    <option selected value="">Danh mục sản phẩm</option>
                                     @foreach ($subCategories as $subCategory)
                                         <option value="{{ $subCategory->id }}" @if ($subCategory->id == old('sub_category_id')) selected @endif>
                                             {{ $subCategory->name }}
@@ -205,8 +205,8 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Product Price</label>
-                                <input type="number" class="form-control" placeholder="Enter Price" name="price"
+                                <label>Giá trị sản phẩm</label>
+                                <input type="number" class="form-control" placeholder="Nhập giá trị..." name="price"
                                     value="{{ old('price') }}">
                                 @error('price')
                                     <div class="error">{{ $message }}</div>
@@ -214,7 +214,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Discount (%)</label>
+                                <label>Khuyến mãi (%)</label>
                                 <input type="number" class="form-control" placeholder="Enter Discount" name="discount"
                                     value="{{ old('discount', 0) }}" min="0" max="100">
                                 @error('discount')
@@ -223,11 +223,11 @@
                             </div>
 
                             <div class="form-group">
-                                <label>Description</label>
+                                <label>Mô tả sản phẩm</label>
                                 <textarea id="summernote" name="description">{!! old('description') !!}</textarea>
                             </div>
 
-                            <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                            <button type="submit" class="btn btn-success waves-effect waves-light m-r-10">Tạo sản phẩm</button>
                         </form>
                     </div>
                 </div>

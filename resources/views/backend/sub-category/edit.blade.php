@@ -16,38 +16,38 @@
 <div class="row">
     <div class="col-12">
         <div class="card card-body">
-            <h3 class="box-title m-b-0 mb-3">Edit Sub Category</h3>
+            <h3 class="box-title m-b-0 mb-3">Cập nhật danh mục sản phẩm</h3>
             <div class="row">
                 <div class="col-sm-12 col-xs-12">
                     <form action="{{ route('sub-categories.update', ['sub_category' => $subCategory->id]) }}" method="post">
                         @method('patch')
                         @csrf
                         <div class="form-group">
-                            <label>Sub Category Name</label>
-                            <input type="text" class="form-control" placeholder="Enter Name" 
+                            <label>Tên danh mục sản phẩm</label>
+                            <input type="text" class="form-control" placeholder="Nhập tên danh mục"
                             name="name" value="{{ old('name', $subCategory->name) }}" autocomplete="off">
-                            @error('name') 
+                            @error('name')
                                 <div class="error">{{ $message }}</div>
                             @enderror
                         </div>
 
                         <div class="form-group">
-                            <h5 class="m-t-30">Select Category</h5>
+                            <h5 class="m-t-30">chọn loại sản phẩm</h5>
                             <select class="custom-select" name="category_id">
-                                <option selected value="">Select category</option>
+                                <option selected value="">Chọn loại sản phẩm</option>
                                 @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}" 
+                                    <option value="{{ $category->id }}"
                                         @if(old('name', $subCategory->category_id) == $category->id) selected @endif>
                                         {{ $category->name }}
                                     </option>
                                 @endforeach
                             </select>
-                            @error('category_id') 
+                            @error('category_id')
                                 <div class="error">{{ $message }}</div>
                             @enderror
                         </div>
 
-                        <button type="submit" class="btn btn-danger"> <i class="fa fa-pencil"></i> Save</button>
+                        <button type="submit" class="btn btn-danger"> <i class="fa fa-pencil"></i>Cập nhật</button>
                     </form>
                 </div>
             </div>

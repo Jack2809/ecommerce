@@ -1,10 +1,10 @@
 <div class="right-sidebar">
     <div class="slimscrollright">
-        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span>
+        <div class="rpanel-title">Màu nền<span><i class="ti-close right-side-toggle"></i></span>
         </div>
         <div class="r-panel-body">
             <ul id="themecolors" class="m-t-20">
-                <li><b>With Light sidebar</b></li>
+                <li><b>Màu sáng</b></li>
                 <li><a href="javascript:void(0)" data-skin="skin-default" class="default-theme">1</a>
                 </li>
                 <li><a href="javascript:void(0)" data-skin="skin-green" class="green-theme">2</a></li>
@@ -12,7 +12,7 @@
                 <li><a href="javascript:void(0)" data-skin="skin-blue" class="blue-theme">4</a></li>
                 <li><a href="javascript:void(0)" data-skin="skin-purple" class="purple-theme working">5</a></li>
                 <li><a href="javascript:void(0)" data-skin="skin-megna" class="megna-theme">6</a></li>
-                <li class="d-block m-t-30"><b>With Dark sidebar</b></li>
+                <li class="d-block m-t-30"><b>Màu tối</b></li>
                 <li><a href="javascript:void(0)" data-skin="skin-default-dark" class="default-dark-theme ">7</a></li>
                 <li><a href="javascript:void(0)" data-skin="skin-green-dark" class="green-dark-theme">8</a></li>
                 <li><a href="javascript:void(0)" data-skin="skin-red-dark" class="red-dark-theme">9</a>

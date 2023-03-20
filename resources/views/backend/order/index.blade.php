@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Orders</h4>
+        <h4 class="text-themecolor">Đơn hàng</h4>
     </div>
     <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item active">Orders</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Đơn hàng</li>
             </ol>
         </div>
     </div>
@@ -17,23 +17,23 @@
     <div class="col-12">
         <div class="card">
             <div class="card-body">
-                <h4 class="card-title">Orders Table</h4>
+                <h4 class="card-title">Danh sách đơn hàng</h4>
                 <div class="table-responsive">
-                    <a href="{{ url('excel/orders') }}">
+                    <!-- <a href="{{ url('excel/orders') }}">
                         <button type="button" class="btn btn-primary mb-3">EXCEL</button>
-                    </a>
+                    </a> -->
                     <div class="form-group">
-                        <input type="text" class="form-control" id="search" placeholder="Type to search" autofocus>
+                        <input type="text" class="form-control" id="search" placeholder="Tìm kiếm đơn hàng" autofocus>
                     </div>
                     <table class="table table-bordered" id="table">
                         <thead>
                             <tr>
-                                <th>Customer Name</th>
-                                <th>Customer Phone</th>
-                                <th>Customer Email</th>
-                                <th>Status</th>
-                                <th>Price</th>
-                                <th class="text-nowrap">Action</th>
+                                <th>Tên khách hàng</th>
+                                <th>Số điện thoại</th>
+                                <th>Email</th>
+                                <th>Trạng thái</th>
+                                <th>Giá trị (VND)</th>
+                                <th class="text-nowrap"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,8 +47,8 @@
                                 </td>
                                 <td>{{ $order->price }}</td>
                                 <td>
-                                    <a href="{{ route('orders.show', ['order' => $order->id ]) }}" 
-                                        data-toggle="tooltip" data-original-title="View"> 
+                                    <a href="{{ route('orders.show', ['order' => $order->id ]) }}"
+                                        data-toggle="tooltip" data-original-title="Chi tiết">
                                         <i class="fa fa-eye m-r-15" aria-hidden="true"></i>
                                     </a>
                                 </td>

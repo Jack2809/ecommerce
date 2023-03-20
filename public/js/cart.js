@@ -35,9 +35,9 @@ function updateCart(that, qty) {
         success: function(data) {
             liveToastSuccess();
             $("#total_price").text(
-                data.toLocaleString("en", {
+                data.toLocaleString("vi", {
                     style: "currency",
-                    currency: "USD"
+                    currency: "VND"
                 })
             );
         }
@@ -71,9 +71,9 @@ $(".increase").on("click", function() {
             .parents("tr")
             .children(".cart__price")
             .text(
-                price.toLocaleString("en", {
+                price.toLocaleString("vi", {
                     style: "currency",
-                    currency: "USD"
+                    currency: "VND"
                 })
             );
         updateCart($(this), quantity + 1);
@@ -102,9 +102,9 @@ $(".decrease").on("click", function() {
             .parents("tr")
             .children(".cart__price")
             .text(
-                price.toLocaleString("en", {
+                price.toLocaleString("vi", {
                     style: "currency",
-                    currency: "USD"
+                    currency: "VND"
                 })
             );
         updateCart($(this), quantity - 1);
@@ -139,9 +139,9 @@ $(".quantityValue").on("keyup", function() {
                 .parents("tr")
                 .children(".cart__price")
                 .text(
-                    price.toLocaleString("en", {
+                    price.toLocaleString("vi", {
                         style: "currency",
-                        currency: "USD"
+                        currency: "VND"
                     })
                 );
             updateCart($(this), qty);

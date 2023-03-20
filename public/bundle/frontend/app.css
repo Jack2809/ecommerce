@@ -10045,7 +10045,7 @@ a.text-dark:hover {
   Author: Colorib
   Author URI: https://www.colorib.com/
   Version: 1.0
-  Created: Colorib 
+  Created: Colorib
 ******************************************************************/
 
 /*------------------------------------------------------------------
@@ -12040,7 +12040,7 @@ ol {
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     margin-bottom: 20px;
 }
 
@@ -14000,11 +14000,11 @@ button.info-paypal-btn:hover i{
 }
 
 .fw-600 {
-    font-weight: 600;   
+    font-weight: 600;
 }
 
 .fs-15 {
-    font-size: 15px;   
+    font-size: 15px;
 }
 
 /*--------------------------------- Responsive Media Quaries -----------------------------*/

@@ -23,7 +23,7 @@
                     <div class="page mb-3">
                         <div class="page__demo">
                             <div class="page__group">
-                                <span class="page__hint">Reviews</span>
+                                <span class="page__hint">Nhận xét</span>
                                 <div class="rating">
                                     <input type="radio" name="rating" value="1"
                                         class="rating__control screen-reader" id="rc1" checked>
@@ -68,11 +68,11 @@
                                 </div>
                             </div>
                         </div>
-                        @error('rating') 
+                        @error('rating')
                             <div class="error text-center">{{ $message }}</div>
                         @enderror
                     </div>
-                    
+
                     <div class="form-group">
                         <textarea class="form-control" rows="3" id="review"
                         placeholder="Share your feedback, reviews about this product" name="body"></textarea>
@@ -81,9 +81,9 @@
                 <div class="modal-footer">
                     <div class="custom-file custom-file-review">
                         <input type="file" class="custom-file-input" accept="image/*" id="imgInp" name="images[]" multiple>
-                        <label class="custom-file-label">Choose Images</label>
+                        <label class="custom-file-label">Chọn hình ảnh</label>
                     </div>
-                    <button type="submit" class="btn btn-success" id="reviewBtn" disabled>Save</button>
+                    <button type="submit" class="btn btn-success" id="reviewBtn" disabled>Cập nhật</button>
                 </div>
             </form>
         </div>

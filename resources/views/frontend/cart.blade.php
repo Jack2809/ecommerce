@@ -8,10 +8,10 @@
                         <table>
                             <thead>
                                 <tr>
-                                    <th>Product</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Action</th>
+                                    <th>Sản phẩm</th>
+                                    <th>Số lượng</th>
+                                    <th>Tổng giá trị sản phẩm (VND)</th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -78,18 +78,18 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="continue__btn">
-                                <a href="{{ route('shop') }}">Continue Shopping</a>
+                                <a href="{{ route('shop') }}">Tiếp tục mua sắm</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="cart__total mt-5">
-                        <h6>Cart total</h6>
+                        <h6>Tổng đơn hàng</h6>
                         <ul>
-                            <li>Total <span id="total_price">{{ money($total) }}</span></li>
+                            <li>Tổng giá trị(VND) <span id="total_price">{{ money($total) }}</span></li>
                         </ul>
-                        <a href="{{ route('checkout.create') }}" class="primary-btn">Proceed to checkout</a>
+                        <a href="{{ route('checkout.create') }}" class="primary-btn">Đặt hàng</a>
                     </div>
                 </div>
             </div>

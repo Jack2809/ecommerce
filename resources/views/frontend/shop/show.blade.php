@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="product__details__breadcrumb">
-                            <a href="/">Home</a>
+                            <a href="/">Trang chủ</a>
                             <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
                             <a href="{{ route('shop') }}">Shop</a>
                             <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
@@ -68,19 +68,19 @@
                                 @for ($i = 5; $i > $ratingStar; $i--)
                                     <i class="fa fa-star-o"></i>
                                 @endfor
-                                <span> - {{ $reviews->count() }} Reviews</span>
+                                <span> - {{ $reviews->count() }}Đánh giá</span>
                             </div>
                             <h3>
                                 {{ money($product->after_discount) }}
                                 @if ($product->discount > 0)
-                                    <span>{{ money($product->price) }}</span>
+                                    <span>{{ money($product->price) }} VND</span>
                                 @endif
                             </h3>
                             <form action="{{ route('cart.store') }}" method="post">
                                 @csrf
                                 <div class="product__details__option">
                                     <div class="product__details__option__size">
-                                        <span>Size:</span>
+                                        <span>Kích cỡ:</span>
                                         @foreach ($sizes as $item)
                                             <label for="size{{ $item->size_id }}" @if ($loop->first) class="active" @endif>
                                                 {{ $item->size->name }}
@@ -91,7 +91,7 @@
                                         @endforeach
                                     </div>
                                     <div class="product__details__option__color" id="colorWrapper">
-                                        <span>Color:</span>
+                                        <span>Màu sắc: </span>
                                         @foreach ($colors as $item)
                                             <label class="color @if ($loop->first) active @endif" style="background:{{ $item->color->code }}">
                                                 <input type="radio" name="color" value="{{ $item->color_id }}" @if ($loop->first) checked @endif>
@@ -113,8 +113,7 @@
                                             <span class="fa fa-angle-down inc qtybtn" id="decrease"></span>
                                         </div>
                                     </div>
-                                    <button id="addToCartBtn" type="submit" class="primary-btn" disabled>add to
-                                        cart</button>
+                                    <button id="addToCartBtn" type="submit" class="primary-btn" disabled>Thêm vào giỏ hàng</button>
                                 </div>
                             </form>
                             <div class="product__details__btns__option">
@@ -122,23 +121,23 @@
                                     @csrf
                                     <input type="hidden" value="{{ $product->id }}" name="product_id">
                                     <button type="submit" class="wishlist">
-                                        <i class="fa fa-heart"></i> add to wishlist
+                                        <i class="fa fa-heart"></i> Thêm vào danh sách ưa thích
                                     </button>
                                 </form>
                             </div>
                             <div class="product__details__last__option">
-                                <h5><span>Guaranteed Safe Checkout</span></h5>
+                                <h5><span>Thanh toán an toàn</span></h5>
                                 <ul>
                                     <li id="in_stock">
-                                        <span>In stock:</span>
+                                        <span>Số lượng trong kho:</span>
                                         @if ($product->attributes->first()->product_quantity == 0)
-                                            <span class="text-danger">Sold Out</span>
+                                            <span class="text-danger">Hết hàng</span>
                                         @else
                                             {{$product->attributes->first()->product_quantity}}
                                         @endif
                                     </li>
-                                    <li><span>Category:</span> {{ $product->category->name }}</li>
-                                    <li><span>Sub Category:</span> {{ $product->subCategory->name }}</li>
+                                    <li><span>Loại sản phẩm:</span> {{ $product->category->name }}</li>
+                                    <li><span>Danh mục:</span> {{ $product->subCategory->name }}</li>
                                 </ul>
                             </div>
                         </div>
@@ -149,15 +148,13 @@
                         <div class="product__details__tab">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link " data-toggle="tab" href="#tabs-5" role="tab">Description</a>
+                                    <a class="nav-link " data-toggle="tab" href="#tabs-5" role="tab">Mô tả sản phẩm</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tabs-6" role="tab">Customer
-                                        Reviews</a>
+                                    <a class="nav-link active" data-toggle="tab" href="#tabs-6" role="tab">Nhận xét khách hàng</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Additional
-                                        Information</a>
+                                    <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Thông tin thêm</a>
                                 </li>
                             </ul>
                             <div class="tab-content">
@@ -171,7 +168,7 @@
                                         <div class="row p-3">
                                             <button type="button"
                                                 class="btn btn-primary button-reviews col-4">{{ $reviews->count() }}
-                                                reviews</button>
+                                                đánh giá</button>
                                         </div>
 
                                         @guest
@@ -179,7 +176,7 @@
                                                 <div class="row col-3 align-items-center">
                                                     <img src="/images/avatar-default.svg" alt="" width="50" class="mr-3">
                                                     <a href="{{ route('login') }}" class="font-weight-bold"
-                                                        style="color: #9d9d9d">Login to reviews</a>
+                                                        style="color: #9d9d9d">đăng nhập để đánh giá</a>
                                                 </div>
                                             </div>
                                         @endguest
@@ -191,8 +188,7 @@
                                                     <img src="/{{ auth()->user()->avatar }}" alt="" width="50"
                                                         class="mr-3 avatar">
                                                     <a href="{{ route('login') }}" class="font-weight-bold"
-                                                        data-toggle="modal" data-target="#reviews" style="color: #9d9d9d">Click
-                                                        to reviews</a>
+                                                        data-toggle="modal" data-target="#reviews" style="color: #9d9d9d">Nhận xét</a>
                                                 </div>
                                             </div>
 
@@ -290,7 +286,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h3 class="related-title">Related Product</h3>
+                    <h3 class="related-title">Sản phẩm liên quan</h3>
                 </div>
             </div>
             <div class="row">
@@ -324,7 +320,7 @@
                                 <div class="product__item__text">
                                     <h6>{{ $product->name }}</h6>
                                     <a href="{{ route('product-details', ['product' => $product->id]) }}"
-                                        class="add-cart">+ Add To Cart</a>
+                                        class="add-cart">+ Thêm vào giỏ hàng</a>
                                     <div class="rating">
                                         @for ($i = 0; $i < $product->rating_star; $i++)
                                             <i class="fa fa-star"></i>
@@ -335,9 +331,9 @@
                                         @endfor
                                     </div>
                                     <h5 class="discount">
-                                        {{ money($product->after_discount) }}
+                                        {{ money($product->after_discount) }} VND
                                         @if ($product->discount > 0)
-                                            <span>{{ money($product->price) }}</span>
+                                            <span>{{ money($product->price) }} VND</span>
                                         @endif
                                     </h5>
                                 </div>

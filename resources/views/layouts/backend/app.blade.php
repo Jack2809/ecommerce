@@ -46,7 +46,7 @@
 
                         <li class="nav-item">
                             <form class="app-search d-none d-md-block d-lg-block">
-                                <input type="text" class="form-control" placeholder="Search & enter">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm...r">
                             </form>
                         </li>
                     </ul>
@@ -66,7 +66,7 @@
                             <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
                                 <ul>
                                     <li>
-                                        <div class="drop-title">Notifications</div>
+                                        <div class="drop-title">Thông báo</div>
                                     </li>
                                     <li>
                                         <div class="message-center">
@@ -104,17 +104,17 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                                <a href="{{ url('edit-profile') }}" class="dropdown-item">
-                                    <i class="ti-user"></i> My Profile
+                                <!-- <a href="{{ url('edit-profile') }}" class="dropdown-item">
+                                    <i class="ti-user"></i> Thông tin cá nhân
                                 </a>
                                 <a href="javascript:void(0)" class="dropdown-item">
-                                    <i class="ti-wallet"></i> My balance
-                                </a>
+                                    <i class="ti-wallet"></i> Số dư
+                                </a> -->
                                 <a href="{{ route('send-email.create') }}" class="dropdown-item">
-                                    <i class="ti-email"></i> Inbox
+                                    <i class="ti-email"></i> Nhắn tin
                                 </a>
                                 <a href="{{ url('logout') }}" class="dropdown-item">
-                                    <i class="fa fa-power-off"></i> Logout
+                                    <i class="fa fa-power-off"></i> Đăng xuất
                                 </a>
                             </div>
                         </li>

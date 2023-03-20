@@ -2,13 +2,13 @@
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor">Customers</h4>
+        <h4 class="text-themecolor">Khách hàng</h4>
     </div>
     <div class="col-md-7 align-self-center text-right">
         <div class="d-flex justify-content-end align-items-center">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Home</a></li>
-                <li class="breadcrumb-item active">Customers</li>
+                <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Trang chủ</a></li>
+                <li class="breadcrumb-item active">Khách hàng</li>
             </ol>
         </div>
     </div>
@@ -32,16 +32,16 @@
                         <form action="{{ route('customers.destroy', ['customer' => $customer->id ]) }}" method="post" class="d-inline">
                             @method('delete')
                             @csrf
-                            <button class="btn-lg btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete"> 
-                                <i class="fa fa-close text-danger"></i> 
+                            <button class="btn-lg btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete">
+                                <i class="fa fa-close text-danger"></i>
                             </button>
                         </form>
-                    </h3> 
+                    </h3>
                     Email : <small>{{ $customer->email }}</small>
                     <address>
-                        Address : {{ $customer->address }}
+                        Địa chỉ : {{ $customer->address }}
                         <br/>
-                        Phone : {{ $customer->phone }}
+                        Số điện thoại : {{ $customer->phone }}
                     </address>
                 </div>
             </div>

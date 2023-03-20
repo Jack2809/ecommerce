@@ -7,12 +7,12 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                    commitment to exceptional quality.
+                                <h6>Bộ sưu tập mùa hè</h6>
+                                <h2>Bộ sưu tâp thu - đông 2022</h2>
+                                <p>
+                                    Một nhãn hiệu chuyên nghiệp tạo ra những thứ sang trọng vói cam kết chất lượng vượt trội.
                                 </p>
-                                <a href="{{ route('shop') }}" class="primary-btn">Shop now <span
+                                <a href="{{ route('shop') }}" class="primary-btn">Mua sắm ngay<span
                                         class="arrow_right"></span></a>
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
@@ -30,12 +30,12 @@
                     <div class="row">
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
-                                <h6>Summer Collection</h6>
-                                <h2>Fall - Winter Collections 2030</h2>
-                                <p>A specialist label creating luxury essentials. Ethically crafted with an unwavering
-                                    commitment to exceptional quality.
+                                <h6>Bộ sưu tập mùa hè</h6>
+                                <h2>Bộ sưu tâp thu - đông 2022</h2>
+                                <p>
+                                    Một nhãn hiệu chuyên nghiệp tạo ra những thứ sang trọng vói cam kết chất lượng vượt trội.
                                 </p>
-                                <a href="{{ route('shop') }}" class="primary-btn">Shop now <span class="arrow_right"></span></a>
+                                <a href="{{ route('shop') }}" class="primary-btn">Mua sắm ngay<span class="arrow_right"></span></a>
                                 <div class="hero__social">
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
@@ -86,7 +86,7 @@
                             </div>
                             <div class="banner__item__text">
                                 <h2>{{ $item->name }}</h2>
-                                <a href="{{ route('shop', ['category' => $item->id]) }}">Shop now</a>
+                                <a href="{{ route('shop', ['category' => $item->id]) }}">Mua sắm ngay</a>
                             </div>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span>Best Sellers</span>
+                            <span>Bán chạy</span>
                         </div>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                                     </div>
                                     <div class="product__item__text">
                                         <h6>{{ $product->name }}</h6>
-                                        <a href="{{ route('product-details', ['product' => $product->id]) }}" class="add-cart">+ Add To Cart</a>
+                                        <a href="{{ route('product-details', ['product' => $product->id]) }}" class="add-cart">+ Thêm vào giỏ hàng</a>
                                         <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
@@ -145,9 +145,9 @@
                                             @endfor
                                         </div>
                                         <h5 class="discount">
-                                            {{ money($product->after_discount) }}
+                                            {{ money($product->after_discount)}} VND
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price) }}</span>
+                                                <span>{{ money($product->price)}} VND</span>
                                             @endif
                                         </h5>
                                     </div>
@@ -164,7 +164,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span>New Arrivals</span>
+                            <span>Sản phẩm mới</span>
                         </div>
                     </div>
                 </div>
@@ -199,7 +199,7 @@
                                     <div class="product__item__text">
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
-                                            class="add-cart">+ Add To Cart</a>
+                                            class="add-cart">+ Thêm vào giỏ hàng</a>
                                         <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
@@ -210,9 +210,9 @@
                                             @endfor
                                         </div>
                                         <h5 class="discount">
-                                            {{ money($product->after_discount) }}
+                                            {{ money($product->after_discount) }} VND
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price) }}</span> @endif
+                                                <span>{{ money($product->price)}} VND</span> @endif
                                         </h5>
                                     </div>
                                 </div>
@@ -228,7 +228,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span>Hot Sales</span>
+                            <span>Giảm sốc</span>
                         </div>
                     </div>
                 </div>
@@ -263,7 +263,7 @@
                                     <div class="product__item__text">
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
-                                            class="add-cart">+ Add To Cart</a>
+                                            class="add-cart">+ Thêm vào giỏ hàng</a>
                                         <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
@@ -274,9 +274,9 @@
                                             @endfor
                                         </div>
                                         <h5 class="discount">
-                                            {{ money($product->after_discount) }}
+                                            {{ money($product->after_discount)}} VND
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price) }}</span> @endif
+                                                <span>{{ money($product->price) }} VND</span> @endif
                                         </h5>
                                     </div>
                                 </div>
@@ -293,7 +293,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="section-title">
-                            <span>Our gallery</span>
+                            <span>Bộ sưu tập</span>
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">
-                        <span>Latest News</span>
+                        <span>Tin mới</span>
                     </div>
                 </div>
             </div>
@@ -333,7 +333,7 @@
                             <div class="blog__item__text">
                                 <span><i class="far fa-calendar"></i> {{ $blog->created_at->format('d F Y') }}</span>
                                 <h5>{{ $blog->title }}</h5>
-                                <a href="{{ route('blog-details', ['blog' => $blog->id]) }}">Read More</a>
+                                <a href="{{ route('blog-details', ['blog' => $blog->id]) }}">Đọc thêm</a>
                             </div>
                         </div>
                     </div>
@@ -342,7 +342,7 @@
             <div class="row justify-content-center">
                 <a href="{{ url('all-blogs') }}">
                     <button type="button" class="site-btn mt-5 loadmore">
-                        Load more
+                        Xêm thêm
                     </button>
                 </a>
             </div>

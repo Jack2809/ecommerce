@@ -36,9 +36,9 @@ class Order extends Model
     public function getStatusColorAttribute()
     {
         $classes = [
-            'Pending' => 'label-warning',
-            'Shipping' => 'label-danger',
-            'Delivered' => 'label-success'
+            'Đang xử lý' => 'label-warning',
+            'Đang giao hàng' => 'label-danger',
+            'Đã giao hàng' => 'label-success'
         ];
         return $classes[$this->status];
     }

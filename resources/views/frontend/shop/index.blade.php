@@ -7,7 +7,7 @@
                     <div class="breadcrumb__text">
                         <h4>Shop</h4>
                         <div class="breadcrumb__links">
-                            <a href="/">Home</a>
+                            <a href="/">Trang chủ</a>
                             <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
                             <span>Shop</span>
                         </div>
@@ -27,7 +27,7 @@
                     </a>
                     <div class="shop__sidebar collapse show" id="collapseSidebar">
                         <div class="shop__sidebar__search">
-                            <input type="text" placeholder="Search by name..." id="nameFilter">
+                            <input type="text" placeholder="Tìm kiếm tên sẩn phẩm..." id="nameFilter">
                         </div>
                         <div class="shop__sidebar__accordion">
                             <input type="hidden" id="filterUrl"
@@ -35,7 +35,7 @@
                             <div class="accordion" id="accordionExample">
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseOne">Categories</a>
+                                        <a data-toggle="collapse" data-target="#collapseOne">Loại sản phẩm</a>
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
@@ -43,7 +43,7 @@
                                                 <ul class="nice-scroll">
                                                     <input type="hidden" id="categorySelected" value={{ request('category') }}>
                                                     @foreach ($categories as $category)
-                                                            <li class="category 
+                                                            <li class="category
                                                                 @if ($category->id == request('category')) active @endif">
                                                                 <input type="hidden" value="{{ $category->id }}"
                                                                     id="category_id">
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseTwo">Sub-Categories</a>
+                                        <a data-toggle="collapse" data-target="#collapseTwo">Danh mục</a>
                                     </div>
                                     <div id="collapseTwo" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
@@ -65,7 +65,7 @@
                                                 <ul class="nice-scroll">
                                                     <input type="hidden" id="subCategorySelected" value={{ request('subcategory') }}>
                                                     @foreach ($subCategories as $subCategory)
-                                                        <li class="sub-category 
+                                                        <li class="sub-category
                                                             @if (request('subcategory') == $subCategory->id) active @endif">
                                                             <input type="hidden" value="{{ $subCategory->id }}"
                                                                 id="sub_category_id">
@@ -79,10 +79,10 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseOne">On Sale</a>
+                                        <!-- <a data-toggle="collapse" data-target="#collapseOne">On Sale</a> -->
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
-                                        <div class="card-body">
+                                        <!-- <div class="card-body">
                                             <div class="shop__sidebar__categories">
                                                 <ul class="nice-scroll">
                                                     <li class="onsale @if (request('sale')=='yes' ) active @endif">
@@ -90,12 +90,12 @@
                                                     </li>
                                                 </ul>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseThree">Filter Price</a>
+                                        <a data-toggle="collapse" data-target="#collapseThree">Lọc theo giá</a>
                                     </div>
                                     <div id="collapseThree" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
@@ -152,7 +152,7 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseFive">Colors</a>
+                                        <a data-toggle="collapse" data-target="#collapseFive">Màu sản phẩm</a>
                                     </div>
                                     <div id="collapseFive" class="collapse show" data-parent="#accordionExample">
                                         <div class="card-body">
@@ -179,17 +179,17 @@
                         <div class="row">
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="shop__product__option__left d-flex">
-                                    <p>Showing {{ $products->count() }} results</p>
+                                    <p>Tìm thấy {{ $products->count() }} kết quả</p>
                                     <div class="spinner-border spinner-border-sm ml-3" role="status" id="spinner"></div>
                                 </div>
 
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6">
                                 <div class="shop__product__option__right">
-                                    <p>Sort by Price:</p>
+                                    <p>Sắp xếp theo giá:</p>
                                     <select id="sortby">
-                                        <option value="asc">Low To High</option>
-                                        <option value="desc">High To Low</option>
+                                        <option value="asc">Thấp đến cao</option>
+                                        <option value="desc">Cao đến thấp</option>
                                     </select>
                                 </div>
                             </div>
@@ -225,7 +225,7 @@
                                     <div class="product__item__text">
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
-                                            class="add-cart">+ Add To Cart</a>
+                                            class="add-cart">+ Thêm vào giỏ hàng</a>
                                         <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
@@ -238,7 +238,7 @@
                                         <h5 class="discount">
                                             {{ money($product->after_discount) }}
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price) }}</span>
+                                                <span>{{ money($product->price) }} VND</span>
                                             @endif
                                         </h5>
                                     </div>
@@ -248,7 +248,7 @@
                     </div>
                     <div class="row justify-content-center">
                         <button type="button" class="site-btn mt-5 loadmore" id="shop_loadmore">
-                            Load More
+                            Xem thêm
                         </button>
                     </div>
                 </div>

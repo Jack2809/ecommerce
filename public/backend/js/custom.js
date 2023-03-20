@@ -1,5 +1,5 @@
 $("#summernote").summernote({
-    placeholder: "Type something ...",
+    placeholder: "Nhập mô tả ...",
     tabsize: 2,
     height: 80,
     toolbar: [

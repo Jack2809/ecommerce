@@ -34,19 +34,19 @@
                             <tr>
                                 <td>{{ $role->name }}</td>
                                 <td>
-                                    <a href="{{ route('assign-roles.index', ['role' => $role->id ]) }}" 
-                                        data-toggle="tooltip" data-original-title="Assign roles"> 
+                                    <a href="{{ route('assign-roles.index', ['role' => $role->id ]) }}"
+                                        data-toggle="tooltip" data-original-title="Assign roles">
                                         <i class="fa fa-bullseye m-r-15" aria-hidden="true"></i>
                                     </a>
-                                    <a href="{{ route('roles.edit', ['role' => $role->id ]) }}" 
-                                        data-toggle="tooltip" data-original-title="Edit"> 
-                                        <i class="fa fa-pencil text-inverse m-r-10"></i> 
+                                    <a href="{{ route('roles.edit', ['role' => $role->id ]) }}"
+                                        data-toggle="tooltip" data-original-title="Cập nhật">
+                                        <i class="fa fa-pencil text-inverse m-r-10"></i>
                                     </a>
                                     <form action="{{ route('roles.destroy', ['role' => $role->id ]) }}" method="post" class="d-inline">
                                         @method('delete')
                                         @csrf
-                                        <button class="btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete"> 
-                                            <i class="fa fa-close text-danger"></i> 
+                                        <button class="btn-none" type="submit" data-toggle="tooltip" data-original-title="Delete">
+                                            <i class="fa fa-close text-danger"></i>
                                         </button>
                                     </form>
                                 </td>
