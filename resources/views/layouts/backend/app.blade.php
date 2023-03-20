@@ -24,7 +24,7 @@
                 <div class="navbar-header d-flex justify-content-center">
                     <a class="navbar-brand" href="/">
                         <b>
-                            adike
+                            ADIKE
                         </b>
                     </a>
                 </div>
@@ -46,7 +46,7 @@
 
                         <li class="nav-item">
                             <form class="app-search d-none d-md-block d-lg-block">
-                                <input type="text" class="form-control" placeholder="Tìm kiếm...r">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm...">
                             </form>
                         </li>
                     </ul>
