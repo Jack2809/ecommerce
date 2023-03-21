@@ -37,7 +37,7 @@ function updateCart(that, qty) {
             $("#total_price").text(
                 data.toLocaleString("vi", {
                     style: "currency",
-                    currency: "VND"
+                    currency: "$"
                 })
             );
         }
@@ -73,7 +73,7 @@ $(".increase").on("click", function() {
             .text(
                 price.toLocaleString("vi", {
                     style: "currency",
-                    currency: "VND"
+                    currency: "$"
                 })
             );
         updateCart($(this), quantity + 1);
@@ -104,7 +104,7 @@ $(".decrease").on("click", function() {
             .text(
                 price.toLocaleString("vi", {
                     style: "currency",
-                    currency: "VND"
+                    currency: "$"
                 })
             );
         updateCart($(this), quantity - 1);
@@ -141,7 +141,7 @@ $(".quantityValue").on("keyup", function() {
                 .text(
                     price.toLocaleString("vi", {
                         style: "currency",
-                        currency: "VND"
+                        currency: "$"
                     })
                 );
             updateCart($(this), qty);

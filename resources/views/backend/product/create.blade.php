@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 @section('content')
     <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
+        <!-- <div class="col-md-5 align-self-center">
             <h4 class="text-themecolor">Sản phẩm</h4>
         </div>
         <div class="col-md-7 align-self-center text-right">
@@ -11,7 +11,7 @@
                     <li class="breadcrumb-item active">Sản phẩm</li>
                 </ol>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="row">
         <div class="col-12">
@@ -152,7 +152,7 @@
                                                         </td>
                                                         <td>
                                                             <input type="number" class="form-control"
-                                                                placeholder="Nhập số lượng..." name="quantity[]" value="">
+                                                                placeholder="Nhập số lượng" name="quantity[]" value="">
                                                         </td>
                                                         <td>
                                                             <div class="custom-file">
@@ -206,7 +206,7 @@
 
                             <div class="form-group">
                                 <label>Giá trị sản phẩm</label>
-                                <input type="number" class="form-control" placeholder="Nhập giá trị..." name="price"
+                                <input type="number" class="form-control" placeholder="Nhập giá trị" name="price"
                                     value="{{ old('price') }}">
                                 @error('price')
                                     <div class="error">{{ $message }}</div>

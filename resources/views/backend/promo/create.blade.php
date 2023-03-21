@@ -1,4 +1,4 @@
-@extends('layouts.backend.app')
+<!-- @extends('layouts.backend.app')
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
@@ -23,7 +23,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Giá trị khuyến mãi (%)</label>
-                            <input type="number" class="form-control" placeholder="Nhập khuyến mãi..." required
+                            <input type="number" class="form-control" placeholder="Nhập khuyến mãi" required
                             name="discount" value="{{ old('discount', 0) }}" autocomplete="off">
                         </div>
 
@@ -39,4 +39,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection -->

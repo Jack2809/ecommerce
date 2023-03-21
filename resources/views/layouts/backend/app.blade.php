@@ -44,15 +44,15 @@
                             </a>
                         </li>
 
-                        <li class="nav-item">
+                        <!-- <li class="nav-item">
                             <form class="app-search d-none d-md-block d-lg-block">
-                                <input type="text" class="form-control" placeholder="Tìm kiếm...r">
+                                <input type="text" class="form-control" placeholder="Tìm kiếm">
                             </form>
-                        </li>
+                        </li> -->
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
+                            <!-- <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 <i class="far fa-bell"></i>
                                 @if ($current_user->unreadNotifications->count() > 0)
@@ -61,7 +61,7 @@
                                     <span class="point"></span>
                                 </div>
                                 @endif
-                            </a>
+                            </a> -->
 
                             <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
                                 <ul>
@@ -110,20 +110,20 @@
                                 <a href="javascript:void(0)" class="dropdown-item">
                                     <i class="ti-wallet"></i> Số dư
                                 </a> -->
-                                <a href="{{ route('send-email.create') }}" class="dropdown-item">
+                                <!-- <a href="{{ route('send-email.create') }}" class="dropdown-item">
                                     <i class="ti-email"></i> Nhắn tin
-                                </a>
+                                </a> -->
                                 <a href="{{ url('logout') }}" class="dropdown-item">
                                     <i class="fa fa-power-off"></i> Đăng xuất
                                 </a>
                             </div>
                         </li>
 
-                        <li class="nav-item right-side-toggle">
+                        <!-- <li class="nav-item right-side-toggle">
                             <a class="nav-link  waves-effect waves-light" href="javascript:void(0)">
                                 <i class="ti-settings"></i>
                             </a>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </nav>

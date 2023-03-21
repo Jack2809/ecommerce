@@ -10,7 +10,7 @@
                                 <tr>
                                     <th>Sản phẩm</th>
                                     <th>Số lượng</th>
-                                    <th>Tổng giá trị sản phẩm (VND)</th>
+                                    <th>Tổng giá trị sản phẩm ($)</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -87,7 +87,7 @@
                     <div class="cart__total mt-5">
                         <h6>Tổng đơn hàng</h6>
                         <ul>
-                            <li>Tổng giá trị(VND) <span id="total_price">{{ money($total) }}</span></li>
+                            <li>Tổng giá trị($) <span id="total_price">{{ money($total) }}</span></li>
                         </ul>
                         <a href="{{ route('checkout.create') }}" class="primary-btn">Đặt hàng</a>
                     </div>

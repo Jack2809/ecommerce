@@ -41,15 +41,15 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-md-12">
+                            <!-- <div class="col-md-12">
                                 <div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="custom-control-input" id="login_as_admin">
-                                    <!-- <label class="custom-control-label" for="login_as_admin">Continue as admin</label> -->
+                                    <label class="custom-control-label" for="login_as_admin">Continue as admin</label>
                                     <a href="/password/reset" id="to-recover" class="text-dark pull-right">
                                         <i class="fa fa-lock m-r-5"></i> Quên mật khẩu?
                                     </a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                         <div class="form-group text-center">
                             <div class="col-xs-12 p-b-20">

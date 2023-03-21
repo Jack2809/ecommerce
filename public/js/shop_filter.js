@@ -230,9 +230,9 @@ function ajaxFilter() {
                 renderProducts(item);
             });
             $(".shop__product__option__left p").text(
-                "Showing " +
+                "Tìm thấy " +
                     $(".product__hover input[name='product_id']").length +
-                    " results"
+                    " kết quả"
             );
             $("#spinner").css("display", "none");
         }
@@ -302,9 +302,9 @@ $("#shop_loadmore").on("click", function(e) {
                     })
                     .val();
                 $(".shop__product__option__left p").text(
-                    "Showing " +
+                    "Tìm thấy " +
                         $(".product__hover input[name='product_id']").length +
-                        " results"
+                        " kết quả"
                 );
             }
             $("#shop_loadmore").text("Xem thêm");

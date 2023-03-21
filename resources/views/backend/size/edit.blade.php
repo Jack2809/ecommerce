@@ -24,7 +24,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Tên kích cỡ</label>
-                            <input type="text" class="form-control" placeholder="Nhập têm kích cỡ..." name="name" value="{{ $size->name }}" autocomplete="off">
+                            <input type="text" class="form-control" placeholder="Nhập têm kích cỡ" name="name" value="{{ $size->name }}" autocomplete="off">
                             @error('name')
                                 <div class="error">{{ $message }}</div>
                             @enderror

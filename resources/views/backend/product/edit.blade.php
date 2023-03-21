@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 @section('content')
     <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
+        <!-- <div class="col-md-5 align-self-center">
             <h4 class="text-themecolor">Sản phẩm</h4>
         </div>
         <div class="col-md-7 align-self-center text-right">
@@ -11,7 +11,7 @@
                     <li class="breadcrumb-item active">Sản phẩm</li>
                 </ol>
             </div>
-        </div>
+        </div> -->
     </div>
     <div class="row">
         <div class="col-12">
@@ -145,7 +145,7 @@
 
                             <div class="form-group">
                                 <label>Khuyên mãi (%)</label>
-                                <input type="number" class="form-control" placeholder="Nhập khuyến mãi..." name="discount"
+                                <input type="number" class="form-control" placeholder="Nhập khuyến mãi" name="discount"
                                     value="{{ old('discount', $product->discount) }}" min="0" max="100">
                                 @error('discount')
                                     <div class="error">{{ $message }}</div>

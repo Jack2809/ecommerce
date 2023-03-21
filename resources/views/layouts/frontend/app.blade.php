@@ -103,9 +103,9 @@
                                     <li>
                                         <a href="{{ url('edit-profile') }}">Cập nhật thông tin</a>
                                     </li>
-                                    <li>
+                                    <!-- <li>
                                         <a href="{{ url('edit-password') }}">Đổi mật khẩu</a>
-                                    </li>
+                                    </li> -->
                                 </ul>
                             </div>
                         </div>
@@ -157,9 +157,9 @@
                 </div>
                 <div class="col-lg-3 col-md-3">
                     <div class="header__nav__option">
-                        <a href="#" class="search-switch">
+                        <!-- <a href="#" class="search-switch">
                             <i class="fa fa-search"></i>
-                        </a>
+                        </a> -->
                         <a href="{{ route('wishlist.index') }}">
                             <i class="far fa-heart"></i>
                         </a>
@@ -219,7 +219,7 @@
                         <ul>
                             <li><a href="{{ route('contact.create') }}">Liên hệ chúng tôi</a></li>
                             <li><a href="tel:0932042076">0925215202</a></li>
-                            <li><a href="mailto:tungptse140843@fpt.edu.vn">tungptse140843@fpt.edu.vnm</a></li>
+                            <li><a href="mailto:tungptse140843@fpt.edu.vn">tungptse140843@fpt.edu.vn</a></li>
                         </ul>
                     </div>
                 </div>
@@ -238,11 +238,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <div class="footer__copyright__text">
-                        <p>
-                            {{-- {{ $setting->copyright_text }} --}}
-                        </p>
-                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -252,7 +248,7 @@
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch">+</div>
             <form action="{{ route('shop') }}" class="search-model-form">
-                <input type="text" id="search-input" placeholder="Tìm kiếm....." name="name" autocomplete="off">
+                <input type="text" id="search-input" placeholder="Tìm kiếm.." name="name" autocomplete="off">
             </form>
         </div>
     </div>

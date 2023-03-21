@@ -13,7 +13,7 @@
                         <div class="col-lg-9 col-md-9 col-sm-6">
                             <h4 class="box-title">Mô tả sản phẩm</h4>
                             <p>{!! $product->description !!}</p>
-                            <h2 class="m-t-40">{{ money($product->price)}} VND<small
+                            <h2 class="m-t-40">{{ money($product->price)}}<small
                                     class="text-success"> ({{ $product->discount }}% off)</small></h2>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12">
@@ -31,7 +31,7 @@
                                         </tr>
                                         <tr>
                                             <td>Giá trị</td>
-                                            <td>{{ money($product->price)}} VND</td>
+                                            <td>{{ money($product->price)}}</td>
                                         </tr>
                                         <tr>
                                             <td>Khuyến mãi (%)</td>
@@ -39,7 +39,7 @@
                                         </tr>
                                         <tr>
                                             <td>Giá trị đã giảm</td>
-                                            <td>{{ money($product->after_discount)}} VND</td>
+                                            <td>{{ money($product->after_discount)}}</td>
                                         </tr>
                                         <tr>
                                             <td>Kích cỡ</td>

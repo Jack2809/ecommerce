@@ -1,4 +1,4 @@
-@extends('layouts.backend.app')
+<!-- @extends('layouts.backend.app')
 @section('content')
 <div class="row page-titles">
     <div class="col-md-5 align-self-center">
@@ -60,4 +60,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection -->

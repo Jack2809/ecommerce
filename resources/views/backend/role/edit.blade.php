@@ -24,7 +24,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Tên loại sản phẩm</label>
-                            <input type="text" class="form-control" placeholder="Nhập tên loại sản phẩm..." name="name" value="{{ $role->name }}" autocomplete="off">
+                            <input type="text" class="form-control" placeholder="Nhập tên loại sản phẩm" name="name" value="{{ $role->name }}" autocomplete="off">
                             @error('name') 
                                 <div class="error">{{ $message }}</div>
                             @enderror

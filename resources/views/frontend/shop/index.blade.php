@@ -2,7 +2,7 @@
 @section('content')
     <section class="breadcrumb-option">
         <div class="container">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb__text">
                         <h4>Shop</h4>
@@ -13,7 +13,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
@@ -27,7 +27,7 @@
                     </a>
                     <div class="shop__sidebar collapse show" id="collapseSidebar">
                         <div class="shop__sidebar__search">
-                            <input type="text" placeholder="Tìm kiếm tên sẩn phẩm..." id="nameFilter">
+                            <input type="text" placeholder="Tìm kiếm tên sẩn phẩm" id="nameFilter">
                         </div>
                         <div class="shop__sidebar__accordion">
                             <input type="hidden" id="filterUrl"
@@ -93,7 +93,7 @@
                                         </div> -->
                                     </div>
                                 </div>
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseThree">Lọc theo giá</a>
                                     </div>
@@ -130,7 +130,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseFour">Size</a>
@@ -150,7 +150,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="card">
+                                <!-- <div class="card">
                                     <div class="card-heading">
                                         <a data-toggle="collapse" data-target="#collapseFive">Màu sản phẩm</a>
                                     </div>
@@ -169,7 +169,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -226,19 +226,19 @@
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
                                             class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
                                             @endfor
 
-                                            @for ($i = 5; $i > $product->rating_star; $i--)
+                                            @for ($i = 6; $i > $product->rating_star; $i--)
                                                 <i class="fa fa-star-o"></i>
                                             @endfor
-                                        </div>
+                                        </div> -->
                                         <h5 class="discount">
                                             {{ money($product->after_discount) }}
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price) }} VND</span>
+                                                <span>{{ money($product->price) }}</span>
                                             @endif
                                         </h5>
                                     </div>

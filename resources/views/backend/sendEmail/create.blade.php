@@ -1,4 +1,4 @@
-@extends('layouts.backend.app')
+<!-- @extends('layouts.backend.app')
 @section('script')
     <script src="{{ asset('backend/js/send_email.js') }}"></script>
 @endsection
@@ -103,4 +103,4 @@
         </div>
     </form>
 
-@endsection
+@endsection -->

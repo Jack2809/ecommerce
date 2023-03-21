@@ -2,7 +2,7 @@
 @section('content')
 <section class="breadcrumb-option">
     <div class="container">
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-lg-12">
                 <div class="breadcrumb__text">
                     <h4>Danh sách của bạn</h4>
@@ -13,7 +13,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <section class="shopping-cart spad">
@@ -25,7 +25,7 @@
                         <thead>
                             <tr>
                                 <th>Sản phẩm</th>
-                                <th>Giá Trị (VND)</th>
+                                <th>Giá Trị ($)</th>
                                 <th></th>
                             </tr>
                         </thead>
@@ -42,7 +42,7 @@
                                                     {{ $item->product->name }}
                                                 </a>
                                             </h6>
-                                            <div class="rating">
+                                            <!-- <div class="rating">
                                                 @for ($i = 0; $i < $item->product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
                                                 @endfor
@@ -50,7 +50,7 @@
                                                 @for ($i = 5; $i > $item->product->rating_star; $i--)
                                                 <i class="fa fa-star-o"></i>
                                                 @endfor
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </td>
                                     <td class="cart__price">{{ money($item->product->after_discount) }}</td>

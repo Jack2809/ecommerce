@@ -110,9 +110,9 @@
                             <div class="col-12">
                                 <div class="product__item sale">
                                     <div class="product__item__pic set-bg" data-setbg="/{{ $product->first_image }}">
-                                        @if ($product->discount > 0)
+                                        <!-- @if ($product->discount > 0)
                                             <span class="label">Sale</span>
-                                        @endif
+                                        @endif -->
                                         <ul class="product__hover">
                                             <li>
                                                 <form action="{{ route('wishlist.store') }}" method="post">
@@ -135,7 +135,7 @@
                                     <div class="product__item__text">
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}" class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
                                             @endfor
@@ -143,11 +143,11 @@
                                             @for ($i = 5; $i > $product->rating_star; $i--)
                                                 <i class="fa fa-star-o"></i>
                                             @endfor
-                                        </div>
+                                        </div> -->
                                         <h5 class="discount">
-                                            {{ money($product->after_discount)}} VND
+                                            {{ money($product->after_discount)}}
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price)}} VND</span>
+                                                <span>{{ money($product->price)}}</span>
                                             @endif
                                         </h5>
                                     </div>
@@ -159,7 +159,7 @@
             </div>
         @endif
 
-        @if ($newArrivals->count() > 0)
+        <!-- @if ($newArrivals->count() > 0)
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
@@ -210,9 +210,9 @@
                                             @endfor
                                         </div>
                                         <h5 class="discount">
-                                            {{ money($product->after_discount) }} VND
+                                            {{ money($product->after_discount) }}
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price)}} VND</span> @endif
+                                                <span>{{ money($product->price)}}</span> @endif
                                         </h5>
                                     </div>
                                 </div>
@@ -221,7 +221,7 @@
                     </div>
                 </div>
             </div>
-        @endif
+        @endif -->
 
         @if ($hotSales->count() > 0)
             <div class="container">
@@ -238,9 +238,9 @@
                             <div class="col-12">
                                 <div class="product__item sale">
                                     <div class="product__item__pic set-bg" data-setbg="/{{ $product->first_image }}">
-                                        @if ($product->discount > 0)
+                                        <!-- @if ($product->discount > 0)
                                             <span class="label">Sale</span>
-                                        @endif
+                                        @endif -->
                                         <ul class="product__hover">
                                             <li>
                                                 <form action="{{ route('wishlist.store') }}" method="post">
@@ -264,7 +264,7 @@
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
                                             class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <div class="rating">
+                                        <!-- <div class="rating">
                                             @for ($i = 0; $i < $product->rating_star; $i++)
                                                 <i class="fa fa-star"></i>
                                             @endfor
@@ -272,11 +272,11 @@
                                             @for ($i = 5; $i > $product->rating_star; $i--)
                                                 <i class="fa fa-star-o"></i>
                                             @endfor
-                                        </div>
+                                        </div> -->
                                         <h5 class="discount">
-                                            {{ money($product->after_discount)}} VND
+                                            {{ money($product->after_discount)}}
                                             @if ($product->discount > 0)
-                                                <span>{{ money($product->price) }} VND</span> @endif
+                                                <span>{{ money($product->price) }}</span> @endif
                                         </h5>
                                     </div>
                                 </div>

@@ -17,7 +17,7 @@
 @section('content')
     <section class="shop-details">
         <div class="product__details__pic">
-            <div class="container">
+            <!-- <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="product__details__breadcrumb">
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <div class="product__details__content">
             <div class="container">
@@ -60,7 +60,7 @@
                     <div class="col-lg-6">
                         <div class="product__details__text">
                             <h4>{{ $product->name }}</h4>
-                            <div class="rating">
+                            <!-- <div class="rating">
                                 @for ($i = 0; $i < $ratingStar; $i++)
                                     <i class="fa fa-star"></i>
                                 @endfor
@@ -69,11 +69,11 @@
                                     <i class="fa fa-star-o"></i>
                                 @endfor
                                 <span> - {{ $reviews->count() }}Đánh giá</span>
-                            </div>
+                            </div> -->
                             <h3>
                                 {{ money($product->after_discount) }}
                                 @if ($product->discount > 0)
-                                    <span>{{ money($product->price) }} VND</span>
+                                    <span>{{ money($product->price) }} $</span>
                                 @endif
                             </h3>
                             <form action="{{ route('cart.store') }}" method="post">
@@ -208,7 +208,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="col-9">
-                                                    <div class="rating mb-2">
+                                                    <!-- <div class="rating mb-2">
                                                         @for ($i = 0; $i < $review->rating; $i++)
                                                             <i class="fa fa-star"></i>
                                                         @endfor
@@ -218,7 +218,7 @@
                                                         @endfor
                                                         <span class="review_at"> - Reviewed at
                                                             {{ $review->updated_at->format('d/m/Y') }}</span>
-                                                    </div>
+                                                    </div> -->
                                                     <p>{{ $review->body }}</p>
                                                     <div>
                                                         @foreach ($review->images as $image)
@@ -295,9 +295,9 @@
                         <div class="col-12">
                             <div class="product__item sale">
                                 <div class="product__item__pic set-bg" data-setbg="/{{ $product->first_image }}">
-                                    @if ($product->discount > 0)
+                                    <!-- @if ($product->discount > 0)
                                         <span class="label">Sale</span>
-                                    @endif
+                                    @endif -->
                                     <ul class="product__hover">
                                         <li>
                                             <form action="{{ route('wishlist.store') }}" method="post">
@@ -321,7 +321,7 @@
                                     <h6>{{ $product->name }}</h6>
                                     <a href="{{ route('product-details', ['product' => $product->id]) }}"
                                         class="add-cart">+ Thêm vào giỏ hàng</a>
-                                    <div class="rating">
+                                    <!-- <div class="rating">
                                         @for ($i = 0; $i < $product->rating_star; $i++)
                                             <i class="fa fa-star"></i>
                                         @endfor
@@ -329,11 +329,11 @@
                                         @for ($i = 5; $i > $product->rating_star; $i--)
                                             <i class="fa fa-star-o"></i>
                                         @endfor
-                                    </div>
+                                    </div> -->
                                     <h5 class="discount">
-                                        {{ money($product->after_discount) }} VND
+                                        {{ money($product->after_discount) }}
                                         @if ($product->discount > 0)
-                                            <span>{{ money($product->price) }} VND</span>
+                                            <span>{{ money($product->price) }}</span>
                                         @endif
                                     </h5>
                                 </div>

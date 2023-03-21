@@ -2,7 +2,7 @@
 @section('content')
 
     <div class="row page-titles">
-        <div class="col-md-5 align-self-center">
+        <!-- <div class="col-md-5 align-self-center">
             <h4 class="text-themecolor">Bảng điều khiển</h4>
         </div>
         <div class="col-md-7 align-self-center text-right">
@@ -12,7 +12,7 @@
                     <li class="breadcrumb-item active">Bảng điều khiển</li>
                 </ol>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <div class="row">
@@ -94,7 +94,7 @@
                                 <p>({{ $month . date('-Y') }})</p>
                             </div>
                             <div class="ml-auto">
-                                <h4 class="counter text-purple">{{ money($totalIncome) }} VND</h4>
+                                <h4 class="counter text-purple">{{ money($totalIncome) }} $</h4>
                             </div>
                         </div>
                     </div>
@@ -132,7 +132,7 @@
             </div>
         </div>
     </div>
-
+<!-- 
     <div class="row">
         <div class="col-lg-6">
             <div class="card">
@@ -149,7 +149,7 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th>Tên sản phẩm</th>
-                                <th>Giá trị (VND)</th>
+                                <th>Giá trị ($)</th>
                                 <th>Khuyến mãi</th>
                                 <th>Số lượng</th>
                                 <th></th>
@@ -189,7 +189,7 @@
                             <tr>
                                 <th class="text-center">#</th>
                                 <th>Tên sản phẩm</th>
-                                <th>Giá trị (VND)</th>
+                                <th>Giá trị ($)</th>
                                 <th>Khuyến mãi</th>
                                 <th>Số lượng</th>
                                 <th></th>
@@ -213,7 +213,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <div class="row">
         <div class="col-lg-12">
@@ -254,7 +254,7 @@
             </div>
         </div>
 
-        <div class="col-lg-12">
+        <!-- <div class="col-lg-12">
             <div class="card">
                 <div class="card-body bg-light">
                     <div class="row">
@@ -271,7 +271,7 @@
                                 <th>Tên khách hàng</th>
                                 <th>Email khách hàng</th>
                                 <th>Số điệnt hoại khách hàng</th>
-                                <th>Giá trị đơn hàng (VND)</th>
+                                <th>Giá trị đơn hàng ($)</th>
                                 <th>Trạng thái</th>
                                 <th></th>
                             </tr>
@@ -303,10 +303,10 @@
                     </table>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
@@ -335,5 +335,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 @endsection

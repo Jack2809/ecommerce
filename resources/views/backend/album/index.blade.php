@@ -1,4 +1,4 @@
-@extends('layouts.backend.app')
+<!-- @extends('layouts.backend.app')
 @section('css')
     <link href="{{ asset('backend/lightbox/css/lightbox.css') }}" rel="stylesheet" />
 @endsection
@@ -37,7 +37,7 @@
                             @csrf
                             <div class="form-group">
                                 <label>Tên bộ sưu tập</label>
-                                <input type="text" class="form-control" placeholder="Tên bộ sưu tập..." required name="title"
+                                <input type="text" class="form-control" placeholder="Tên bộ sưu tập" required name="title"
                                     value="{{ old('title') }}" autocomplete="off">
                                 @error('title')
                                     <div class="error">{{ $message }}</div>
@@ -119,4 +119,4 @@
             @endforeach
         </div>
     </div>
-@endsection
+@endsection -->

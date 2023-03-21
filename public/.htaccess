@@ -22,7 +22,7 @@
     # Compress HTML, CSS, JavaScript, Text, XML and fonts
     AddOutputFilterByType DEFLATE application/javascript
     AddOutputFilterByType DEFLATE application/rss+xml
-    AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+    AddOutputFilterByType DEFLATE application/$.ms-fontobject
     AddOutputFilterByType DEFLATE application/x-font
     AddOutputFilterByType DEFLATE application/x-font-opentype
     AddOutputFilterByType DEFLATE application/x-font-otf

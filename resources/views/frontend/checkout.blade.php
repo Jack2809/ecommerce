@@ -28,11 +28,11 @@
                     <div class="row edit-input-btn">
                         <div class="col-lg-8 col-md-6 mb-5">
                             @guest
-                                <h6 class="coupon__code">
+                                <!-- <h6 class="coupon__code">
                                     <i class="fa fa-tag"></i>
                                     Bạn chưa có tài khoản?
                                     <a href="{{ route('login') }}">Đăng nhập tại đây</a>
-                                </h6>
+                                </h6> -->
                             @endguest
 
                             <h6 class="checkout__title">Thông tin đặt hàng</h6>
@@ -154,7 +154,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6">
                             <div class="cart__discount">
-                                <h6>Mã ãi</h6>
+                                <h6>Mã mãi</h6>
                                 <div>
                                     <input type="text" placeholder="Promos code" id="promos_code">
                                     <button type="button" id="apply_promos">Áp dụng</button>
@@ -188,9 +188,9 @@
                                     @endforeach
                                 </ul>
                                 <ul class="checkout__total__all">
-                                    <li>Tổng giá trị đơn hàng(VND) <span>{{ money($total) }}</span></li>
-                                    <li>ãi <span id="order_discount">0%</span></li>
-                                    <li>Tổng giá trị đơn hàng sau khi giảm (VND) <span id="order_total">{{ money($total) }}</span></li>
+                                    <li>Tổng giá trị đơn hàng($) <span>{{ money($total) }}</span></li>
+                                    <li>Khuyến mãi <span id="order_discount">0%</span></li>
+                                    <li>Tổng giá trị đơn hàng sau khi giảm ($) <span id="order_total">{{ money($total) }}</span></li>
                                 </ul>
                                 @if (!session()->has('paypal_paid') && $products->count() > 0)
                                     <p><b>Phương thức thanh toán</b></p>

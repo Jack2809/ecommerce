@@ -38,8 +38,8 @@ if (! function_exists('store_file')) {
 if (! function_exists('money')) {
     function money($money)
     {
-        // return 'VND' . number_format($money, 2, '.', '.');
-        return number_format($money, 2, '.', '.');
+        return '$' . number_format($money, 2, '.', '.');
+        // return number_format($money, 3, '.', '.');
     }
 }
 

@@ -1,7 +1,7 @@
 @extends('layouts.backend.app')
 @section('content')
 <div class="row page-titles">
-    <div class="col-md-5 align-self-center">
+    <!-- <div class="col-md-5 align-self-center">
         <h4 class="text-themecolor">Đơn hàng</h4>
     </div>
     <div class="col-md-7 align-self-center text-right">
@@ -11,7 +11,7 @@
                 <li class="breadcrumb-item active">Đơn hàng</li>
             </ol>
         </div>
-    </div>
+    </div> -->
 </div>
 <div class="row">
     <div class="col-12">
@@ -32,7 +32,7 @@
                                 <th>Số điện thoại</th>
                                 <th>Email</th>
                                 <th>Trạng thái</th>
-                                <th>Giá trị (VND)</th>
+                                <th>Giá trị ($)</th>
                                 <th class="text-nowrap"></th>
                             </tr>
                         </thead>

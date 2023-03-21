@@ -24,7 +24,7 @@
                         @csrf
                         <div class="form-group">
                             <label>Tên Blog</label>
-                            <input type="text" class="form-control" placeholder="Nhập tên Blog..."
+                            <input type="text" class="form-control" placeholder="Nhập tên Blog"
                              name="title" value="{{ old('title', $blog->title) }}" autocomplete="off">
                             @error('title')
                                 <div class="error">{{ $message }}</div>
