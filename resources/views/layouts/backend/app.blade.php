@@ -24,7 +24,7 @@
                 <div class="navbar-header d-flex justify-content-center">
                     <a class="navbar-brand" href="/">
                         <b>
-                            adike
+                            ADIKE
                         </b>
                     </a>
                 </div>

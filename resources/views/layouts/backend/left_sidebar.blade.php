@@ -44,13 +44,13 @@
                     <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false">
                         <i class="fas fa-toolbox"></i>
-                        <span class="hide-menu">Product Attributes</span>
+                        <span class="hide-menu">Thuộc tính sản phẩm</span>
                     </a>
                     <ul aria-expanded="false" class="collapse">
-                        <li><a href="{{ route('sizes.index') }}">All Sizes</a></li>
-                        <li><a href="{{ route('sizes.create') }}">New Size</a></li>
-                        <li><a href="{{ route('colors.index') }}">All Colors</a></li>
-                        <li><a href="{{ route('colors.create') }}">New Color</a></li>
+                        <li><a href="{{ route('sizes.index') }}">Danh sách kích cỡ</a></li>
+                        <li><a href="{{ route('sizes.create') }}">Tạo kích cỡ</a></li>
+                        <li><a href="{{ route('colors.index') }}">Danh sách màu sắc</a></li>
+                        <li><a href="{{ route('colors.create') }}">Tạo màu sắc</a></li>
                     </ul>
                 </li>
                 <li>
