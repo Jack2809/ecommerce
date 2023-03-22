@@ -76,7 +76,7 @@
                 <div class="row">
                     <div class="col-6">
                         <div class="header__top__left">
-                            <p>“Just do it.”</p>
+                            <p>“No pain no gain.”</p>
                         </div>
                     </div>
                     <div class="col-6">
@@ -235,7 +235,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    
+
                 </div>
             </div>
         </div>
