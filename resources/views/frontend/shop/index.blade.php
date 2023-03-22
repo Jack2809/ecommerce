@@ -2,18 +2,6 @@
 @section('content')
     <section class="breadcrumb-option">
         <div class="container">
-            <!-- <div class="row">
-                <div class="col-lg-12">
-                    <div class="breadcrumb__text">
-                        <h4>Shop</h4>
-                        <div class="breadcrumb__links">
-                            <a href="/">Trang chủ</a>
-                            <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
-                            <span>Shop</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </section>
 
@@ -79,18 +67,8 @@
                                 </div>
                                 <div class="card">
                                     <div class="card-heading">
-                                        <!-- <a data-toggle="collapse" data-target="#collapseOne">On Sale</a> -->
                                     </div>
                                     <div id="collapseOne" class="collapse show" data-parent="#accordionExample">
-                                        <!-- <div class="card-body">
-                                            <div class="shop__sidebar__categories">
-                                                <ul class="nice-scroll">
-                                                    <li class="onsale @if (request('sale')=='yes' ) active @endif">
-                                                        <span>Sale</span>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div> -->
                                     </div>
                                 </div>
                                 <!-- <div class="card">
@@ -150,26 +128,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- <div class="card">
-                                    <div class="card-heading">
-                                        <a data-toggle="collapse" data-target="#collapseFive">Màu sản phẩm</a>
-                                    </div>
-                                    <div id="collapseFive" class="collapse show" data-parent="#accordionExample">
-                                        <div class="card-body">
-                                            <div class="shop__sidebar__color">
-                                                <input type="hidden" id="colorSelected">
-                                                @foreach ($colors as $color)
-                                                    <label style="background: {{ $color->code }}"
-                                                        for="color{{ $color->id }}">
-                                                        <i class="fas fa-check"></i>
-                                                        <input class="colorFilter" type="radio"
-                                                            id="color{{ $color->id }}" value="{{ $color->id }}">
-                                                    </label>
-                                                @endforeach
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
                             </div>
                         </div>
                     </div>
@@ -226,15 +184,6 @@
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
                                             class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <!-- <div class="rating">
-                                            @for ($i = 0; $i < $product->rating_star; $i++)
-                                                <i class="fa fa-star"></i>
-                                            @endfor
-
-                                            @for ($i = 6; $i > $product->rating_star; $i--)
-                                                <i class="fa fa-star-o"></i>
-                                            @endfor
-                                        </div> -->
                                         <h5 class="discount">
                                             {{ money($product->after_discount) }}
                                             @if ($product->discount > 0)

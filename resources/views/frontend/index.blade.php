@@ -110,9 +110,6 @@
                             <div class="col-12">
                                 <div class="product__item sale">
                                     <div class="product__item__pic set-bg" data-setbg="/{{ $product->first_image }}">
-                                        <!-- @if ($product->discount > 0)
-                                            <span class="label">Sale</span>
-                                        @endif -->
                                         <ul class="product__hover">
                                             <li>
                                                 <form action="{{ route('wishlist.store') }}" method="post">
@@ -135,15 +132,6 @@
                                     <div class="product__item__text">
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}" class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <!-- <div class="rating">
-                                            @for ($i = 0; $i < $product->rating_star; $i++)
-                                                <i class="fa fa-star"></i>
-                                            @endfor
-
-                                            @for ($i = 5; $i > $product->rating_star; $i--)
-                                                <i class="fa fa-star-o"></i>
-                                            @endfor
-                                        </div> -->
                                         <h5 class="discount">
                                             {{ money($product->after_discount)}}
                                             @if ($product->discount > 0)
@@ -158,71 +146,6 @@
                 </div>
             </div>
         @endif
-
-        <!-- @if ($newArrivals->count() > 0)
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-title">
-                            <span>Sản phẩm mới</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="new-arrivals" class="owl-carousel">
-                        @foreach ($newArrivals as $product)
-                            <div class="col-12">
-                                <div class="product__item sale">
-                                    <div class="product__item__pic set-bg" data-setbg="{{ $product->first_image }}">
-                                        @if ($product->discount > 0)
-                                            <span class="label">Sale</span>
-                                        @endif
-                                        <ul class="product__hover">
-                                            <li>
-                                                <form action="{{ route('wishlist.store') }}" method="post">
-                                                    @csrf
-                                                    <input type="hidden" value="{{ $product->id }}" name="product_id">
-                                                    <button type="submit" class="wishlist">
-                                                        <i class="fa fa-heart-o" aria-hidden="true"></i>
-                                                    </button>
-                                                </form>
-                                            </li>
-                                            <li>
-                                                <a href="{{ route('product-details', ['product' => $product->id]) }}">
-                                                    <button type="submit" class="wishlist">
-                                                        <i class="fa fa-search"></i>
-                                                    </button>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="product__item__text">
-                                        <h6>{{ $product->name }}</h6>
-                                        <a href="{{ route('product-details', ['product' => $product->id]) }}"
-                                            class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <div class="rating">
-                                            @for ($i = 0; $i < $product->rating_star; $i++)
-                                                <i class="fa fa-star"></i>
-                                            @endfor
-
-                                            @for ($i = 5; $i > $product->rating_star; $i--)
-                                                <i class="fa fa-star-o"></i>
-                                            @endfor
-                                        </div>
-                                        <h5 class="discount">
-                                            {{ money($product->after_discount) }}
-                                            @if ($product->discount > 0)
-                                                <span>{{ money($product->price)}}</span> @endif
-                                        </h5>
-                                    </div>
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                </div>
-            </div>
-        @endif -->
-
         @if ($hotSales->count() > 0)
             <div class="container">
                 <div class="row">
@@ -238,9 +161,6 @@
                             <div class="col-12">
                                 <div class="product__item sale">
                                     <div class="product__item__pic set-bg" data-setbg="/{{ $product->first_image }}">
-                                        <!-- @if ($product->discount > 0)
-                                            <span class="label">Sale</span>
-                                        @endif -->
                                         <ul class="product__hover">
                                             <li>
                                                 <form action="{{ route('wishlist.store') }}" method="post">
@@ -264,15 +184,6 @@
                                         <h6>{{ $product->name }}</h6>
                                         <a href="{{ route('product-details', ['product' => $product->id]) }}"
                                             class="add-cart">+ Thêm vào giỏ hàng</a>
-                                        <!-- <div class="rating">
-                                            @for ($i = 0; $i < $product->rating_star; $i++)
-                                                <i class="fa fa-star"></i>
-                                            @endfor
-
-                                            @for ($i = 5; $i > $product->rating_star; $i--)
-                                                <i class="fa fa-star-o"></i>
-                                            @endfor
-                                        </div> -->
                                         <h5 class="discount">
                                             {{ money($product->after_discount)}}
                                             @if ($product->discount > 0)

@@ -28,10 +28,7 @@ class ShopController extends Controller
         $colors = Cache::remember('colors', now()->addMinutes(10), function () {
             return Color::all();
         });
-        // $categories = Category::all();
-        // $subCategories = SubCategory::all();
-        // $sizes = Size::all();
-        // $colors = Color::all();
+
         return view('frontend.shop.index', compact('products', 'categories', 'sizes', 'subCategories', 'colors'));
     }
 
@@ -39,13 +36,8 @@ class ShopController extends Controller
     {
         //thêm vào sản phẩm đã xem cho user đã đăng nhâp
         ViewedProduct::view($product);
-
-        //xứ lý problems n + 1
-        $product->load(['attributes.images', 'reviews.images']);
-
         $relatedProducts = $product->related;
-        $reviews = $product->reviews()->paginate(10);
-        $ratingStar = round($reviews->average('rating'));
+
 
         //các sizes được lấy phải là duy nhất, tránh lỗi hiện thị các size trùng nhau
         $sizes = $product->attributes->unique('size_id');
@@ -57,7 +49,7 @@ class ShopController extends Controller
         //chọn thằng sizes[0] vì size[0] được chọn mặc định (dùng nó để lọc bớt các color được hiển thị)
         //các colors được lấy phải là duy nhất, tránh lỗi hiện thị các color trùng nhau
         $colors = $product->attributes()->where('size_id', $sizes[0]->size_id)->get()->unique('color_id');
-        return view('frontend.shop.show', compact('product', 'relatedProducts', 'reviews', 'ratingStar', 'colors', 'sizes'));
+        return view('frontend.shop.show', compact('product', 'relatedProducts', 'colors', 'sizes'));
     }
 
     //dùng để lọc sản phẩm theo category, giá,...

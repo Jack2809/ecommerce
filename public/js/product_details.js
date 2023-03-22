@@ -8,13 +8,6 @@ $(".tab-image").on("click", function() {
     $(this).addClass("active");
 });
 
-$("#review").on("keyup", function() {
-    $("#reviewBtn").removeAttr("disabled");
-    if (this.value == "") {
-        $("#reviewBtn").attr("disabled", "disabled");
-    }
-});
-
 function readURL(input) {
     $(".image-review").remove();
     for (let index = 0; index < input.files.length; index++) {

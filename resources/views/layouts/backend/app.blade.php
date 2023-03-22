@@ -43,58 +43,8 @@
                                 <i class="icon-menu"></i>
                             </a>
                         </li>
-
-                        <!-- <li class="nav-item">
-                            <form class="app-search d-none d-md-block d-lg-block">
-                                <input type="text" class="form-control" placeholder="Tìm kiếm">
-                            </form>
-                        </li> -->
                     </ul>
                     <ul class="navbar-nav my-lg-0">
-                        <li class="nav-item dropdown">
-                            <!-- <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                <i class="far fa-bell"></i>
-                                @if ($current_user->unreadNotifications->count() > 0)
-                                <div class="notify">
-                                    <span class="heartbit"></span>
-                                    <span class="point"></span>
-                                </div>
-                                @endif
-                            </a> -->
-
-                            <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown">
-                                <ul>
-                                    <li>
-                                        <div class="drop-title">Thông báo</div>
-                                    </li>
-                                    <li>
-                                        <div class="message-center">
-                                            @foreach ($current_user->unreadNotifications as $item)
-                                            <a href="{{ $item->data['url'] }}?notification={{ $item->id }}">
-                                                <div class="btn btn-danger btn-circle">
-                                                    <i class="{{ $item->data['icon'] ?? 'fas fa-wallet' }}"></i>
-                                                </div>
-                                                <div class="mail-contnet">
-                                                    <h5>{{ $item->data['title'] }}</h5>
-                                                    <span class="mail-desc">{{ $item->data['body'] }}</span>
-                                                    <span class="time">{{ $item->created_at->format('d-m H:i') }}</span>
-                                                </div>
-                                            </a>
-                                            @endforeach
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="nav-link text-center link"
-                                        href="{{ $current_user->unreadNotifications->count() > 0 ? route('mark-all-as-read') : '#'}}">
-                                            <strong>Mark all notifications as read</strong> <i class="fa fa-angle-right"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </li>
-
                         <li class="nav-item dropdown u-pro">
                             <a class="nav-link dropdown-toggle waves-effect waves-dark profile-pic" href=""
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -104,26 +54,11 @@
                                 </span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                                <!-- <a href="{{ url('edit-profile') }}" class="dropdown-item">
-                                    <i class="ti-user"></i> Thông tin cá nhân
-                                </a>
-                                <a href="javascript:void(0)" class="dropdown-item">
-                                    <i class="ti-wallet"></i> Số dư
-                                </a> -->
-                                <!-- <a href="{{ route('send-email.create') }}" class="dropdown-item">
-                                    <i class="ti-email"></i> Nhắn tin
-                                </a> -->
                                 <a href="{{ url('logout') }}" class="dropdown-item">
                                     <i class="fa fa-power-off"></i> Đăng xuất
                                 </a>
                             </div>
                         </li>
-
-                        <!-- <li class="nav-item right-side-toggle">
-                            <a class="nav-link  waves-effect waves-light" href="javascript:void(0)">
-                                <i class="ti-settings"></i>
-                            </a>
-                        </li> -->
                     </ul>
                 </div>
             </nav>
@@ -140,7 +75,6 @@
         </div>
 
         <footer class="footer">
-            {{-- {{ $setting->  copyright_text }} --}}
         </footer>
 
     </div>

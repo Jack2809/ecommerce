@@ -8,12 +8,6 @@
                         <span class="hide-menu">Bảng điều khiển</span>
                     </a>
                 </li>
-                <!-- <li>
-                    <a class="waves-effect waves-dark" href="{{ route('albums-images') }}" >
-                        <i class="far fa-images"></i>
-                        <span class="hide-menu">Bộ sưu tập ảnh</span>
-                    </a>
-                </li> -->
                 <li>
                     <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
                         aria-expanded="false">
@@ -64,47 +58,12 @@
                         <li><a href="{{ route('products.create') }}">Tạo sản phẩm</a></li>
                     </ul>
                 </li>
-                <!-- <li>
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                        aria-expanded="false">
-                        <i class="mdi mdi-sale"></i>
-                        <span class="hide-menu">Promos</span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="{{ route('promos.index') }}">Danh sách khuyến mãi</a></li>
-                        <li><a href="{{ route('promos.create') }}">Tạo khuyến mãi</a></li>
-                    </ul>
-                </li> -->
                 <li>
                     <a class="waves-effect waves-dark" href="{{ route('orders.index') }}">
                         <i class="fas fa-shopping-bag"></i>
                         <span class="hide-menu">Đơn hàng</span>
                     </a>
                 </li>
-                <!-- <li>
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                        aria-expanded="false">
-                        <i class="fas fa-globe-asia"></i>
-                        <span class="hide-menu">Truyền thông</span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="{{ route('send-email.create') }}">Gửi tin nhắn</a></li>
-                        <li><a href="{{ url('contact') }}">Liên hệ</a></li>
-                        <li><a href="{{ route('customers.index') }}">Khách hàng</a></li>
-                    </ul>
-                </li> -->
-                <!-- <li>
-                    <a class="has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                        aria-expanded="false">
-                        <i class="ti-settings"></i>
-                        <span class="hide-menu">Settings</span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse">
-                        <li><a href="{{ route('system-setting.edit') }}">System Settings</a></li>
-                        <li><a href="{{ route('roles.index') }}">All Roles</a></li>
-                        <li><a href="{{ route('roles.create') }}">New Role</a></li>
-                    </ul>
-                </li> -->
             </ul>
         </nav>
     </div>

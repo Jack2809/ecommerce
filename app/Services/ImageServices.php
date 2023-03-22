@@ -22,18 +22,6 @@ class ImageServices
         self::deleteImagesByProduct($item);
     }
 
-    public static function deleteImagesByProduct($product)
-    {
-        $product->load(['reviews.images', 'attributes.images']);
-        foreach ($product->attributes as $attribute) {
-            ProductImage::deleteItem($attribute);
-        }
-        
-        foreach ($product->reviews as $review) {
-            ReviewImage::deleteItem($review);
-        }
-    }
-
     public static function deleteImagesByAttribute($item)
     {
         foreach ($item->attributes as $attribute) {

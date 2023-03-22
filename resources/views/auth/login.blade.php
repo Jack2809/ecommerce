@@ -41,40 +41,17 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <!-- <div class="col-md-12">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="login_as_admin">
-                                    <label class="custom-control-label" for="login_as_admin">Continue as admin</label>
-                                    <a href="/password/reset" id="to-recover" class="text-dark pull-right">
-                                        <i class="fa fa-lock m-r-5"></i> Quên mật khẩu?
-                                    </a>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="form-group text-center">
                             <div class="col-xs-12 p-b-20">
                                 <button class="btn btn-block btn-lg btn-info btn-rounded" type="submit">Đăng nhập</button>
                             </div>
                         </div>
-                        <!-- <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-                                <div class="social">
-                                    <a href="{{ url('auth/redirect/facebook') }}" class="btn btn-facebook"
-                                        data-toggle="tooltip" title="Login with Facebook">
-                                        <i aria-hidden="true" class="fa fa-facebook"></i>
-                                    </a>
-                                    <a href="{{ url('auth/redirect/google') }}" class="btn btn-googleplus"
-                                        data-toggle="tooltip" title="Login with Google"> <i aria-hidden="true"
-                                            class="fa fa-google-plus"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div> -->
                         <div class="form-group m-b-0">
                             <div class="col-sm-12 text-center">
                                 Bạn chưa có tài khoản?
                                 <a href="{{ route('register') }}" class="text-info m-l-5">
-                                    <b>Đăng kí</b>
+                                    <b>Đăng ký</b>
                                 </a>
                             </div>
                         </div>

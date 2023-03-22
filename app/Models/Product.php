@@ -42,10 +42,6 @@ class Product extends Model
         return $this->hasMany('App\Models\ProductAttribute');
     }
 
-    public function reviews()
-    {
-        return $this->hasMany('App\Models\Review');
-    }
 
     public function orders()
     {
@@ -135,11 +131,6 @@ class Product extends Model
     public function getAfterDiscountAttribute()
     {
         return $this->price * ((100 - $this->discount) / 100);
-    }
-
-    public function getRatingStarAttribute()
-    {
-        return round($this->reviews->average('rating'));
     }
 
     /*  *****************************METHODS***************************** */

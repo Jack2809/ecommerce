@@ -2,18 +2,6 @@
 @section('content')
 <section class="breadcrumb-option">
     <div class="container">
-        <!-- <div class="row">
-            <div class="col-lg-12">
-                <div class="breadcrumb__text">
-                    <h4>Danh sách của bạn</h4>
-                    <div class="breadcrumb__links">
-                        <a href="/">Trang chủ</a>
-                        <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
-                        <span>Danh sách ưa thích</span>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </div>
 </section>
 <section class="shopping-cart spad">
@@ -42,15 +30,6 @@
                                                     {{ $item->product->name }}
                                                 </a>
                                             </h6>
-                                            <!-- <div class="rating">
-                                                @for ($i = 0; $i < $item->product->rating_star; $i++)
-                                                <i class="fa fa-star"></i>
-                                                @endfor
-                
-                                                @for ($i = 5; $i > $item->product->rating_star; $i--)
-                                                <i class="fa fa-star-o"></i>
-                                                @endfor
-                                            </div> -->
                                         </div>
                                     </td>
                                     <td class="cart__price">{{ money($item->product->after_discount) }}</td>

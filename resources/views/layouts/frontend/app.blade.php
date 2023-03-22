@@ -103,9 +103,6 @@
                                     <li>
                                         <a href="{{ url('edit-profile') }}">Cập nhật thông tin</a>
                                     </li>
-                                    <!-- <li>
-                                        <a href="{{ url('edit-password') }}">Đổi mật khẩu</a>
-                                    </li> -->
                                 </ul>
                             </div>
                         </div>

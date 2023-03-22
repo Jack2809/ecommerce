@@ -27,14 +27,6 @@
                     <input type="hidden" value="0" name="discount" id="discount">
                     <div class="row edit-input-btn">
                         <div class="col-lg-8 col-md-6 mb-5">
-                            @guest
-                                <!-- <h6 class="coupon__code">
-                                    <i class="fa fa-tag"></i>
-                                    Bạn chưa có tài khoản?
-                                    <a href="{{ route('login') }}">Đăng nhập tại đây</a>
-                                </h6> -->
-                            @endguest
-
                             <h6 class="checkout__title">Thông tin đặt hàng</h6>
                             <div class="row">
                                 <div class="col-lg-12">
@@ -132,7 +124,7 @@
                                 </div>
                                 <div class="col-lg-6 custom-nice-select ward">
                                     <div class="checkout__input">
-                                        <p>Phường/Xã/Thị trấn<<span>*</span></p>
+                                        <p>Phường/Xã/Thị trấn<span>*</span></p>
                                         <select id="ward" name="ward_id">
                                             @foreach ($user->district->wards ?? [] as $ward)
                                                 <option value="{{ $ward->id }}"
@@ -153,15 +145,8 @@
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6">
-                            <div class="cart__discount">
-                                <h6>Mã mãi</h6>
-                                <div>
-                                    <input type="text" placeholder="Promos code" id="promos_code">
-                                    <button type="button" id="apply_promos">Áp dụng</button>
-                                </div>
-                            </div>
                             <div class="checkout__order">
-                                <h4 class="order__title">Chi tiết đơn hàngr</h4>
+                                <h4 class="order__title">Chi tiết đơn hàng</h4>
                                 <div class="checkout__order__products font-weight-bold">Sản phẩm <span>Total</span></div>
                                 <ul class="checkout__total__products">
                                     @foreach ($products as $product)
@@ -176,7 +161,6 @@
                                             <input type="hidden" name="quantity[]" value="{{ $item['quantity'] }}">
                                             <input type="hidden" name="total[]"
                                                 value="{{ $product->after_discount * $item['quantity'] }}">
-
                                             <li>
                                                 <div>{{ $product->name }} - {{ $attribute->color->name }}<br>
                                                     Kích cỡ: {{ $attribute->size->name }}
@@ -192,58 +176,22 @@
                                     <li>Khuyến mãi <span id="order_discount">0%</span></li>
                                     <li>Tổng giá trị đơn hàng sau khi giảm ($) <span id="order_total">{{ money($total) }}</span></li>
                                 </ul>
-                                @if (!session()->has('paypal_paid') && $products->count() > 0)
+                                @if ($products->count() > 0)
                                     <p><b>Phương thức thanh toán</b></p>
                                     <div class="mb-3">
                                         <div class="custom-control custom-radio">
                                             <input type="radio" id="cod" name="customRadio" class="custom-control-input"
                                                 checked>
                                             <label class="custom-control-label fw-600 fs-15" for="cod">COD</label>
-
                                             <button type="button" class="info-paypal-btn" data-toggle="tooltip" data-placement="top" title="Pay on delivery">
                                                 <i class="fas fa-info-circle"></i>
                                             </button>
                                         </div>
-                                       {{-- <div class="custom-control custom-radio">
-                                            <input type="radio" id="paypal" name="customRadio" class="custom-control-input">
-                                            <label class="custom-control-label fw-600 fs-15" for="paypal">PAYPAL</label>
-
-                                            <button type="button" class="info-paypal-btn" data-toggle="modal"
-                                                data-target="#info_paypal_modal">
-                                                <i class="fas fa-info-circle"></i>
-                                            </button>
-
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="info_paypal_modal" data-backdrop="static"
-                                                data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                                                aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="staticBackdropLabel">
-                                                                PAYPAL ACCOUNT TEST
-                                                            </h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <p>Username : sb-47duhe6013914@personal.example.com</p>
-                                                            <p>Password : 12345678</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div> --}}
                                     </div>
-                                    <div id="paypal-button" style="display: none"></div>
-                                @elseif(session()->has('paypal_paid'))
-                                    <p><b>You're paid by PAYPAL</b></p>
                                 @endif
                                 @if ($products->count() > 0)
                                     <button type="submit" class="site-btn" id="site-btn">
-                                        Đặ hàng
+                                        Đặt hàng
                                     </button>
                                 @endif
                             </div>
@@ -253,5 +201,4 @@
             </div>
         </div>
     </section>
-    <script src="https://www.paypalobjects.com/api/checkout.js"></script>
 @endsection

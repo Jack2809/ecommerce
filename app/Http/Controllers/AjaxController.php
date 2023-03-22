@@ -4,17 +4,12 @@ namespace App\Http\Controllers;
 
 use App\Models\Size;
 use App\Models\Color;
-use App\Models\Promo;
 use App\Models\District;
 use App\Models\Province;
 use App\Models\ProductAttribute;
 
 class AjaxController extends Controller
 {
-    public function findPromos($code)
-    {
-        return Promo::where('code', $code)->first();
-    }
 
     public function getColor($product, $size)
     {

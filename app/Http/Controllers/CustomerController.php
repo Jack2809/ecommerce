@@ -14,10 +14,9 @@ class CustomerController extends Controller
 
     public function show(User $customer)
     {
-        $customer->load(['reviews.images', 'wishlist', 'viewed_products']);
-        $reviews = $customer->reviews;
+        $customer->load(['wishlist', 'viewed_products']);
         $wishlist = $customer->wishlist;
         $viewed_products = $customer->viewed_products;
-        return view('backend.customer.show', compact('customer', 'reviews', 'wishlist', 'viewed_products'));
+        return view('backend.customer.show', compact('customer', 'wishlist', 'viewed_products'));
     }
 }

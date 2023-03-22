@@ -17,19 +17,6 @@
 @section('content')
     <section class="shop-details">
         <div class="product__details__pic">
-            <!-- <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="product__details__breadcrumb">
-                            <a href="/">Trang chủ</a>
-                            <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
-                            <a href="{{ route('shop') }}">Shop</a>
-                            <i class="fa fa-caret-right mx-2" aria-hidden="true"></i>
-                            <span>{{ $product->name }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
         <div class="product__details__content">
             <div class="container">
@@ -60,16 +47,6 @@
                     <div class="col-lg-6">
                         <div class="product__details__text">
                             <h4>{{ $product->name }}</h4>
-                            <!-- <div class="rating">
-                                @for ($i = 0; $i < $ratingStar; $i++)
-                                    <i class="fa fa-star"></i>
-                                @endfor
-
-                                @for ($i = 5; $i > $ratingStar; $i--)
-                                    <i class="fa fa-star-o"></i>
-                                @endfor
-                                <span> - {{ $reviews->count() }}Đánh giá</span>
-                            </div> -->
                             <h3>
                                 {{ money($product->after_discount) }}
                                 @if ($product->discount > 0)
@@ -164,77 +141,7 @@
                                     </div>
                                 </div>
                                 <div class="tab-pane active" id="tabs-6" role="tabpanel">
-                                    <div class="product__details__tab__content">
-                                        <div class="row p-3">
-                                            <button type="button"
-                                                class="btn btn-primary button-reviews col-4">{{ $reviews->count() }}
-                                                đánh giá</button>
-                                        </div>
-
-                                        @guest
-                                            <div class="row p-3">
-                                                <div class="row col-3 align-items-center">
-                                                    <img src="/images/avatar-default.svg" alt="" width="50" class="mr-3">
-                                                    <a href="{{ route('login') }}" class="font-weight-bold"
-                                                        style="color: #9d9d9d">đăng nhập để đánh giá</a>
-                                                </div>
-                                            </div>
-                                        @endguest
-
-                                        @auth
-
-                                            <div class="row p-3">
-                                                <div class="row col-3 align-items-center">
-                                                    <img src="/{{ auth()->user()->avatar }}" alt="" width="50"
-                                                        class="mr-3 avatar">
-                                                    <a href="{{ route('login') }}" class="font-weight-bold"
-                                                        data-toggle="modal" data-target="#reviews" style="color: #9d9d9d">Nhận xét</a>
-                                                </div>
-                                            </div>
-
-                                            <!-- Modal -->
-                                            @include('frontend.modals.review')
-
-                                        @endauth
-
-                                        @foreach ($reviews as $review)
-                                            <div class="row p-3 border-bottom">
-                                                <div class="row col-3 align-items-start">
-                                                    <img src="/{{ $review->user->avatar }}" alt="" width="50"
-                                                        class="mr-3 avatar">
-                                                    <div>
-                                                        <p class="font-weight-bold">{{ $review->user->name }}</p>
-                                                        <p>Joined at {{ $review->user->created_at->format('d/m/Y') }}</p>
-                                                    </div>
-                                                </div>
-                                                <div class="col-9">
-                                                    <!-- <div class="rating mb-2">
-                                                        @for ($i = 0; $i < $review->rating; $i++)
-                                                            <i class="fa fa-star"></i>
-                                                        @endfor
-
-                                                        @for ($i = 5; $i > $review->rating; $i--)
-                                                            <i class="fa fa-star-o"></i>
-                                                        @endfor
-                                                        <span class="review_at"> - Reviewed at
-                                                            {{ $review->updated_at->format('d/m/Y') }}</span>
-                                                    </div> -->
-                                                    <p>{{ $review->body }}</p>
-                                                    <div>
-                                                        @foreach ($review->images as $image)
-                                                            <a href="/{{ $image->path }}"
-                                                                data-lightbox="album{{ $review->id }}">
-                                                                <img src="/{{ $image->path }}" class="image-review mr-2"
-                                                                    width="120" height="120">
-                                                            </a>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                    <div class="mt-3">
-                                        {{ $reviews->links() }}
+                                    <div class="product__details__tab__content"
                                     </div>
                                 </div>
                                 <div class="tab-pane" id="tabs-7" role="tabpanel">
@@ -295,9 +202,6 @@
                         <div class="col-12">
                             <div class="product__item sale">
                                 <div class="product__item__pic set-bg" data-setbg="/{{ $product->first_image }}">
-                                    <!-- @if ($product->discount > 0)
-                                        <span class="label">Sale</span>
-                                    @endif -->
                                     <ul class="product__hover">
                                         <li>
                                             <form action="{{ route('wishlist.store') }}" method="post">
@@ -321,15 +225,6 @@
                                     <h6>{{ $product->name }}</h6>
                                     <a href="{{ route('product-details', ['product' => $product->id]) }}"
                                         class="add-cart">+ Thêm vào giỏ hàng</a>
-                                    <!-- <div class="rating">
-                                        @for ($i = 0; $i < $product->rating_star; $i++)
-                                            <i class="fa fa-star"></i>
-                                        @endfor
-
-                                        @for ($i = 5; $i > $product->rating_star; $i--)
-                                            <i class="fa fa-star-o"></i>
-                                        @endfor
-                                    </div> -->
                                     <h5 class="discount">
                                         {{ money($product->after_discount) }}
                                         @if ($product->discount > 0)

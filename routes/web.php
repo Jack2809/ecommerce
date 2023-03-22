@@ -31,14 +31,11 @@ Route::group(['middleware'=>'HtmlMinifier'], function () {
     Route::post('order-checking', 'OrderCheckController@check')->name('checking-order');
     Route::get('get-colors/{product}/{size}', 'AjaxController@getColor');
     Route::get('get-attribute', 'AjaxController@getAttribute');
-    Route::get('find-promos/{code}', 'AjaxController@findPromos');
     Route::get('districts/{province}', 'AjaxController@getDistrict');
     Route::get('wards/{district}', 'AjaxController@getWards');
-    Route::get('paypal-paid', 'AjaxController@paypalPaid');
 
     Route::middleware(['auth'])->group(function () {
         Route::resource('wishlist', 'WishListController');
-        Route::post('review/{product}', 'ProductReviewController')->name('review');
         Route::get('edit-profile', 'ProfileController@editProfile')->name('edit-profile');
         Route::post('edit-profile', 'ProfileController@updateProfile');
         Route::get('edit-password', 'ProfileController@editPassword');
@@ -55,29 +52,15 @@ Route::group(['middleware'=>'HtmlMinifier'], function () {
         Route::resource('sizes', 'SizeController');
         Route::resource('colors', 'ColorController');
         Route::resource('roles', 'RoleController');
-        Route::resource('promos', 'PromoController');
         Route::resource('orders', 'OrderController');
         Route::resource('customers', 'CustomerController');
         Route::resource('tags', 'TagController');
         Route::resource('blogs', 'BlogController');
-        Route::get('albums-images', 'AlbumImageController@index')->name('albums-images');
-        Route::post('albums-images', 'AlbumImageController@store');
-        Route::delete('albums-images/{album}/delete', 'AlbumImageController@destroy');
-        Route::patch('albums-images/{album}/display', 'AlbumImageController@display');
-        Route::patch('albums-images/{album}/un-display', 'AlbumImageController@unDisplay');
         Route::get('contact', 'ContactController@index');
         Route::get('dashboard', 'DashboardController@index')->name('dashboard');
         Route::get('assign-roles/{role}', 'AssignRoleController@index')->name('assign-roles.index');
         Route::post('assign-roles/{role}', 'AssignRoleController@store')->name('assign-roles.store');
-        Route::get('system-setting', 'SystemSettingController@edit')->name('system-setting.edit');
-        Route::post('system-setting', 'SystemSettingController@update')->name('system-setting.update');
         Route::get('mark-all-as-read', 'NotificationController@markAllAsRead')->name('mark-all-as-read');
-        Route::prefix('excel')->group(function () {
-            Route::get('categories', 'ExportExcelController@categories');
-            Route::get('sub-categories', 'ExportExcelController@subCategories');
-            Route::get('products', 'ExportExcelController@products');
-            Route::get('orders', 'ExportExcelController@orders');
-        });
     });
     Route::get('auth/redirect/{provider}', 'SocialController@redirect');
     Route::get('callback/{provider}', 'SocialController@callback');

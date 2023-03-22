@@ -55,10 +55,10 @@ class User extends Authenticatable
         return $this->belongsTo('App\Models\Ward');
     }
 
-    public function reviews()
-    {
-        return $this->hasMany('App\Models\Review');
-    }
+    // public function reviews()
+    // {
+    //     return $this->hasMany('App\Models\Review');
+    // }
 
     public function wishlist()
     {
