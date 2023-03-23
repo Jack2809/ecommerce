@@ -37,7 +37,7 @@
                         <a class="nav-link" data-toggle="tab" href="#wishlist" role="tab">Danh sách ưa thích</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" data-toggle="tab" href="#viewed" role="tab">Viewed Product</a>
+                        <a class="nav-link" data-toggle="tab" href="#viewed" role="tab">Sản phẩm đã xem</a>
                     </li>
                 </ul>
                 <div class="tab-content">
