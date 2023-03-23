@@ -94,7 +94,7 @@
                                 <p>({{ $month . date('-Y') }})</p>
                             </div>
                             <div class="ml-auto">
-                                <h4 class="counter text-purple">{{ money($totalIncome) }} $</h4>
+                                <h4 class="counter text-purple">{{ money($totalIncome) }}</h4>
                             </div>
                         </div>
                     </div>

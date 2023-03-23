@@ -61,12 +61,6 @@
                                             <td>Số lương đơn hàng đẵ thành công</td>
                                             <td>{{ $product->orders->count() }}</td>
                                         </tr>
-                                        <tr>
-                                            <td>Nhận xét</td>
-                                            <td>
-                                                <a href="{{ route('product-details', ['product' => $product->id]) }}">Chi tiết</a>
-                                            </td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

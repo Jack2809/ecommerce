@@ -34,9 +34,6 @@
             <div class="card">
                 <ul class="nav nav-tabs profile-tab" role="tablist">
                     <li class="nav-item">
-                        <a class="nav-link active" data-toggle="tab" href="#review" role="tab">Nhận xét</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" data-toggle="tab" href="#wishlist" role="tab">Danh sách ưa thích</a>
                     </li>
                     <li class="nav-item">

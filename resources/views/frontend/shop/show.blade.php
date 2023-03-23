@@ -128,9 +128,6 @@
                                     <a class="nav-link " data-toggle="tab" href="#tabs-5" role="tab">Mô tả sản phẩm</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link active" data-toggle="tab" href="#tabs-6" role="tab">Nhận xét khách hàng</a>
-                                </li>
-                                <li class="nav-item">
                                     <a class="nav-link" data-toggle="tab" href="#tabs-7" role="tab">Thông tin thêm</a>
                                 </li>
                             </ul>
