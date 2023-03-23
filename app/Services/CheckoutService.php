@@ -19,7 +19,7 @@ class CheckoutService
     {
         $this->data = $data;
     }
-    
+
     public function store()
     {
         $order = $this->storeInDb();
@@ -38,7 +38,7 @@ class CheckoutService
 
     private function sendNotification($order)
     {
-        User::find(1)->notify(new NewOrder($order));
+        // User::find(1)->notify(new NewOrder($order));
         Mail::to($this->data['customer_email'])->queue(new CheckoutMail($order));
     }
 
@@ -55,7 +55,7 @@ class CheckoutService
                             ->where('size_id', $data['size_id'][$index])
                             ->where('color_id', $data['color_id'][$index])
                             ->first();
-            
+
             if (!$attribute) {
                 session()->forget('cart.'.$value.'.'.$index);
                 return false;
