@@ -29,6 +29,8 @@ Before you continue, ensure you meet the following requirements:
 Install
 
 * Clone project
+* Move project to xampp -> htdocs
+* Open project by VSCode
 * Rename or copy ```.env.example``` file to ```.env```
 * Open terminal in root folder project and type ```composer update```
 * Run project with command ```php artisan serve```
