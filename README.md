@@ -12,6 +12,7 @@ Introduction
         + View dashboard
         + Manage customer
         + Manage Order
+* Github: https://github.com/Jack2809/ecommerce.git
 
 Prerequisites
 
