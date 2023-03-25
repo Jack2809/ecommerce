@@ -1,17 +1,40 @@
-## Information
+# ecommerce
 
-This is an e-commerce project, including features such as showing products, add to cart, checkout, wish list, login with Facebook - Google, sending email when customer makes the checkout (using queue in Laravel), and also has an admin page for management, etc.
+Introduction
 
-Website Demo : [http://adike-ecommerce.herokuapp.com](http://adike-ecommerce.herokuapp.com/)
+* Project is clothing store sport ( ADIKE Sport)
+* Project was write by php language and use Laravel technologies
+* The project can:
+    - For user:
+        + Can buy clothes
+    - For admin:
+        + Manage product
+        + View dashboard
+        + Manage customer
+        + Manage Order
+
+Prerequisites
+
+Before you continue, ensure you meet the following requirements:
+
+* You have installed version 7.4.33 of nodejs (https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/7.4.33/). 
+* You have installed the latest version of composer (https://getcomposer.org/download/). 
+* You must setup environment php by:
+    1. Open environment in your computer
+    2. Choose ```path```
+    3. Finally setup new path for php in folder xampp you was install
+* You have installed of VSCode (https://visualstudio.microsoft.com/downloads).
+
+Install
+
+* Clone project
+* Rename or copy ```.env.example``` file to ```.env```
+* Open terminal in root folder project and type ```composer update```
+* Run project with command ```php artisan serve```
+
+Contact me:
+
+*Phone number: 0988486443
+*Email: boypham12042000@gmail.com
 
 
-## Installation
-
-1. Clone the repo and ```cd``` into it
-2. ```composer install```
-3. Rename or copy ```.env.example``` file to ```.env```
-4. ```php artisan key:generate```
-5. Set your database credentials in your ```.env``` file
-6. Set your mail credentials in your ```.env``` file
-7. ```php artisan migrate:fresh --seed``` 
-8. ```php artisan serve```
