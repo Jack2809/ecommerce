@@ -77,31 +77,35 @@
                                         @endforeach
                                     </div>
                                 </div>
-                                <div class="product__details__cart__option">
-                                    <div class="quantity">
-                                        <div class="pro-qty">
-                                            <input type="hidden" value="{{ $product->id }}" name="product_id"
+                                @auth
+                                    <div class="product__details__cart__option">
+                                        <div class="quantity">
+                                            <div class="pro-qty">
+                                                <input type="hidden" value="{{ $product->id }}" name="product_id"
                                                 id="product_id">
-                                            <input type="hidden"
+                                                <input type="hidden"
                                                 value="{{ $product->attributes->first()->product_quantity }}"
                                                 id="max_qty">
-                                            <span class="fa fa-angle-up dec qtybtn" id="increase"></span>
-                                            <input type="text" value="0" id="quantity" name="quantity">
-                                            <span class="fa fa-angle-down inc qtybtn" id="decrease"></span>
+                                                <span class="fa fa-angle-up dec qtybtn" id="increase"></span>
+                                                <input type="text" value="0" id="quantity" name="quantity">
+                                                <span class="fa fa-angle-down inc qtybtn" id="decrease"></span>
+                                            </div>
                                         </div>
+                                        <button id="addToCartBtn" type="submit" class="primary-btn" disabled>Thêm vào giỏ hàng</button>
                                     </div>
-                                    <button id="addToCartBtn" type="submit" class="primary-btn" disabled>Thêm vào giỏ hàng</button>
-                                </div>
+                                @endauth
                             </form>
-                            <div class="product__details__btns__option">
-                                <form action="{{ route('wishlist.store') }}" method="post">
-                                    @csrf
-                                    <input type="hidden" value="{{ $product->id }}" name="product_id">
-                                    <button type="submit" class="wishlist">
-                                        <i class="fa fa-heart"></i> Thêm vào danh sách ưa thích
-                                    </button>
-                                </form>
-                            </div>
+                            @auth
+                                <div class="product__details__btns__option">
+                                    <form action="{{ route('wishlist.store') }}" method="post">
+                                        @csrf
+                                        <input type="hidden" value="{{ $product->id }}" name="product_id">
+                                        <button type="submit" class="wishlist">
+                                            <i class="fa fa-heart"></i> Thêm vào danh sách ưa thích
+                                        </button>
+                                    </form>
+                                </div>
+                            @endauth
                             <div class="product__details__last__option">
                                 <h5><span>Thanh toán an toàn</span></h5>
                                 <ul>

@@ -96,15 +96,16 @@
                                     @endif
                                 @endauth
                             </div>
-
-                            <div class="header__top__hover my-profile">
-                                <span>Thông tin cá nhân<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
-                                <ul>
-                                    <li>
-                                        <a href="{{ url('edit-profile') }}">Cập nhật thông tin</a>
-                                    </li>
-                                </ul>
-                            </div>
+                            @auth
+                                <div class="header__top__hover my-profile">
+                                    <span>Thông tin cá nhân<i class="fa fa-chevron-down" aria-hidden="true"></i></span>
+                                    <ul>
+                                        <li>
+                                            <a href="{{ url('edit-profile') }}">Cập nhật thông tin</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            @endauth
                         </div>
                     </div>
                 </div>

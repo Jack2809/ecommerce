@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['middleware'=>'HtmlMinifier'], function () {
     /* *************Front End************* */
-    Route::resource('cart', 'CartController');
     Route::get('update-cart-ajax', 'CartController@update');
     Route::resource('checkout', 'CheckoutController');
     Route::get('/', 'LandingPageController@index')->name('home');
@@ -35,6 +34,7 @@ Route::group(['middleware'=>'HtmlMinifier'], function () {
     Route::get('wards/{district}', 'AjaxController@getWards');
 
     Route::middleware(['auth'])->group(function () {
+        Route::resource('cart', 'CartController');
         Route::resource('wishlist', 'WishListController');
         Route::get('edit-profile', 'ProfileController@editProfile')->name('edit-profile');
         Route::post('edit-profile', 'ProfileController@updateProfile');

@@ -8,7 +8,7 @@
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
                                 <h6>Bộ sưu tập mùa hè</h6>
-                                <h2>Bộ sưu tâp thu - đông 2022</h2>
+                                <h2>Bộ sưu tập thu - đông 2022</h2>
                                 <p>
                                     Một nhãn hiệu chuyên nghiệp tạo ra những thứ sang trọng vói cam kết chất lượng vượt trội.
                                 </p>
@@ -31,7 +31,7 @@
                         <div class="col-xl-5 col-lg-7 col-md-8">
                             <div class="hero__text">
                                 <h6>Bộ sưu tập mùa hè</h6>
-                                <h2>Bộ sưu tâp thu - đông 2022</h2>
+                                <h2>Bộ sưu tập thu - đông 2022</h2>
                                 <p>
                                     Một nhãn hiệu chuyên nghiệp tạo ra những thứ sang trọng vói cam kết chất lượng vượt trội.
                                 </p>

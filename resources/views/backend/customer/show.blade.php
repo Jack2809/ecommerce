@@ -7,7 +7,7 @@
                     <div class="align-self-center"> <img src="/{{ $customer->avatar }}" class="customer-avatar" width="100">
                         <h4 class="card-title">{{ $customer->name }}</h4>
                         <h6 class="card-subtitle">{{ $customer->email }}</h6>
-                        <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt </p>
+                        <p class="text-white"></p>
                     </div>
                 </div>
             </div>
