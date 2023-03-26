@@ -92,7 +92,7 @@
                                                             <div class="custom-file">
                                                                 <input type="file" multiple class="custom-file-input"
                                                                     name="images{{ $index }}[]" accept="image/*">
-                                                                <label class="custom-file-label">Chọn hình ảnh/label>
+                                                                <label class="custom-file-label">Chọn hình ảnh</label>
                                                             </div>
                                                         </td>
                                                         <td>
