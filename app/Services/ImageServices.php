@@ -4,7 +4,7 @@ namespace App\Services;
 use App\Models\Size;
 use App\Models\Color;
 use App\Models\Category;
-use App\Models\ReviewImage;
+// use App\Models\ReviewImage;
 use App\Models\SubCategory;
 use App\Models\ProductImage;
 
@@ -27,6 +27,12 @@ class ImageServices
         foreach ($item->attributes as $attribute) {
             ProductImage::deleteItem($attribute);
         }
+    }
+    public static function deleteImagesByProduct($item)
+    {
+        // foreach ($item->attributes as $attribute) {
+            ProductImage::deleteItem($item);
+        // }
     }
 
     public static function deleteImagesBySubCategory($subCategory)
